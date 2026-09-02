@@ -2,41 +2,61 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Moses Mkondani | Geospatial Scientist
-    </title>
+    <title>Moses Mkondani | Geospatial Scientist</title>
 
     <meta name="description"
-          content="Professional GIS, Remote Sensing and Web GIS portfolio of Moses Mkondani.">
+          content="Professional GIS, Remote Sensing, UAV, GNSS, Mineral Exploration and Web GIS portfolio of Moses Mkondani.">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Leaflet Map -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    >
+    <!-- Leaflet -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-    <!-- Web GIS display styling -->
     <style>
+
+        /* =========================================================
+           GENERAL MAP / PROJECT IMAGE STYLING
+        ========================================================= */
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #111820;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Gold, Groundwater and LULC maps */
+        .map-image img {
+            object-fit: cover;
+        }
+
+        /* =========================================================
+           FEATURED WEB GIS
+        ========================================================= */
 
         .webgis-live {
             width: 100%;
             background: #111820;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
         }
 
         .webgis-live iframe {
             width: 100%;
-            height: 650px;
+            height: 700px;
             border: none;
             display: block;
             background: #ffffff;
@@ -53,237 +73,137 @@
             color: #aebac1;
         }
 
-        .project-image {
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .project-image.map-image {
-            height: 260px;
-        }
-
-        .project-image.map-image img {
-            object-fit: cover;
-        }
-
         .webgis-project-link {
             display: block;
             color: inherit;
             text-decoration: none;
         }
 
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
         @media (max-width: 768px) {
 
-            .webgis-live iframe {
-                height: 500px;
+            .project-image {
+                height: 230px;
             }
 
+            .webgis-live iframe {
+                height: 550px;
+            }
         }
 
         @media (max-width: 480px) {
 
-            .webgis-live iframe {
-                height: 420px;
+            .project-image {
+                height: 210px;
             }
 
+            .webgis-live iframe {
+                height: 450px;
+            }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
+<!-- =============================================================
+     NAVIGATION
+============================================================= -->
 
-<!-- ================= NAVIGATION ================= -->
+<header>
 
-<header class="navbar">
+    <nav class="navbar">
 
-    <div class="nav-container">
+        <div class="container nav-container">
 
-        <a href="#home" class="logo">
-
-            <span>MK</span>
-
-            <div>
-
-                <strong>
-                    MOSES MKONDANI
-                </strong>
-
-                <small>
-                    GEOSPATIAL SCIENTIST
-                </small>
-
-            </div>
-
-        </a>
-
-
-        <button
-            class="menu-toggle"
-            id="menuToggle">
-
-            ☰
-
-        </button>
-
-
-        <nav id="navMenu">
-
-            <a href="#home">
-                Home
+            <a href="#home" class="logo">
+                Moses Mkondani
             </a>
 
-            <a href="#about">
-                About
-            </a>
+            <ul class="nav-links">
 
-            <a href="#projects">
-                Projects
-            </a>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-            <a href="#remote-sensing">
-                Remote Sensing
-            </a>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-            <a href="#uav">
-                UAV & GNSS
-            </a>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-            <a href="#webgis">
-                Web GIS
-            </a>
+                <li>
+                    <a href="#remote-sensing">Remote Sensing</a>
+                </li>
 
-            <a href="#skills">
-                Skills
-            </a>
+                <li>
+                    <a href="#uav">UAV & GNSS</a>
+                </li>
 
-            <a href="#cv">
-                CV
-            </a>
+                <li>
+                    <a href="#webgis">Web GIS</a>
+                </li>
 
-            <a href="#contact">
-                Contact
-            </a>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-        </nav>
+                <li>
+                    <a href="#cv">CV</a>
+                </li>
 
-    </div>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =============================================================
+     HERO
+============================================================= -->
 
 <section id="home" class="hero">
 
-    <div class="hero-content">
+    <div class="container hero-content">
 
-        <p class="eyebrow">
-            GIS • REMOTE SENSING • WEB GIS • EARTH OBSERVATION
+        <p class="hero-kicker">
+            GEOSPATIAL SCIENTIST
         </p>
-
 
         <h1>
-
             Turning Geospatial Data
-            Into <span>Decision Intelligence.</span>
-
+            Into Decision Intelligence.
         </h1>
 
-
         <p class="hero-description">
-
-            Geospatial Scientist specialising in Geographic
-            Information Systems, Remote Sensing, Earth Observation,
-            spatial analysis, Web GIS and geospatial
-            decision-support systems.
-
+            GIS, Remote Sensing, Web GIS, UAV and GNSS solutions
+            for environmental monitoring, mineral exploration,
+            natural resource management and spatial decision-making.
         </p>
-
 
         <div class="hero-buttons">
 
-            <a
-                href="#projects"
-                class="btn primary">
-
-                Explore My Work
-
+            <a href="#projects" class="btn primary">
+                VIEW PROJECTS
             </a>
 
-
-            <a
-                href="#contact"
-                class="btn secondary">
-
-                Contact Me
-
+            <a href="#contact" class="btn secondary">
+                CONTACT ME
             </a>
-
-        </div>
-
-
-        <div class="hero-stats">
-
-            <div>
-
-                <strong>
-                    GIS
-                </strong>
-
-                <span>
-                    Spatial Analysis
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    RS
-                </strong>
-
-                <span>
-                    Earth Observation
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    WEB
-                </strong>
-
-                <span>
-                    Web GIS
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    UAV
-                </strong>
-
-                <span>
-                    Drone & GNSS
-                </span>
-
-            </div>
 
         </div>
 
@@ -292,99 +212,48 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =============================================================
+     ABOUT
+============================================================= -->
 
-<section
-    id="about"
-    class="section">
+<section id="about" class="section">
 
-    <div class="section-header">
+    <div class="container">
 
-        <span class="section-number">
-            01
-        </span>
+        <div class="section-heading">
 
-
-        <div>
-
-            <p class="eyebrow">
-                ABOUT ME
+            <p class="section-number">
+                01
             </p>
 
-
             <h2>
-
-                Geospatial Science
-                Meets Real-World Problems.
-
+                About Me
             </h2>
 
         </div>
 
-    </div>
 
-
-    <div class="about-grid">
-
-        <div class="about-text">
-
-            <p class="lead">
-
-                I am a Geospatial Scientist with a background in
-                Geographic Information Science and Earth Observation,
-                with practical experience in GIS, remote sensing,
-                spatial modelling, UAV surveying and Web GIS.
-
-            </p>
-
+        <div class="about-content">
 
             <p>
-
-                My work focuses on transforming spatial and Earth
-                observation data into useful information for
-                environmental monitoring, mineral exploration,
-                natural-resource assessment and spatial
-                decision-making.
-
+                I am a Geospatial Scientist specialising in Geographic
+                Information Systems, Remote Sensing, Earth Observation,
+                Web GIS, UAV mapping and GNSS surveying.
             </p>
-
 
             <p>
-
-                I have worked with satellite imagery, digital
-                elevation models, GNSS observations, drone imagery
-                and spatial databases to develop analytical
-                workflows and geospatial applications.
-
+                My work focuses on transforming spatial data into
+                practical information that supports environmental
+                management, mineral exploration, groundwater assessment,
+                land-use planning and spatial decision-making.
             </p>
-
-        </div>
-
-
-        <div class="about-card">
-
-            <div class="profile-placeholder">
-
-                <span>
-                    MK
-                </span>
-
-            </div>
-
-
-            <h3>
-                Moses Mkondani
-            </h3>
-
 
             <p>
-                Geospatial Scientist
+                I have experience working with GIS databases, satellite
+                imagery, digital elevation models, spatial analysis,
+                geospatial modelling, field surveying and interactive
+                Web GIS applications.
             </p>
-
-
-            <div class="location">
-                Zimbabwe
-            </div>
 
         </div>
 
@@ -393,80 +262,50 @@
 </section>
 
 
-<!-- ================= FEATURED PROJECT ================= -->
+<!-- =============================================================
+     FEATURED PROJECT
+============================================================= -->
 
-<section class="featured-project">
+<section class="section featured-project">
 
-    <div class="featured-container">
+    <div class="container">
 
-        <div class="featured-content">
+        <div class="section-heading">
 
-            <p class="eyebrow">
+            <p class="section-number">
                 FEATURED PROJECT
             </p>
 
-
             <h2>
-
-                Web GIS Gold Claim Pegging
-                Decision-Support System
-
+                Web GIS Gold Claim Pegging Decision-Support System
             </h2>
-
-
-            <p class="project-location">
-                Shamva District, Zimbabwe
-            </p>
-
-
-            <p>
-
-                A Web GIS-based decision-support concept
-                integrating GIS, remote sensing and mineral
-                prospectivity modelling to support spatial
-                assessment of areas with potential for
-                gold mineralisation.
-
-            </p>
-
-
-            <div class="tags">
-
-                <span>GIS</span>
-                <span>Remote Sensing</span>
-                <span>Web GIS</span>
-                <span>PostGIS</span>
-                <span>GeoServer</span>
-
-            </div>
-
-
-            <a
-                href="#webgis"
-                class="btn primary">
-
-                View Project
-
-            </a>
 
         </div>
 
 
-        <div class="map-placeholder">
+        <div class="featured-content">
 
-            <div class="map-grid">
+            <div>
 
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <p>
+                    An interactive Web GIS decision-support system
+                    developed for visualising gold mineralisation
+                    prospectivity and supporting spatial decision-making
+                    for gold claim pegging in Shamva District, Zimbabwe.
+                </p>
 
-            </div>
+                <p>
+                    The system integrates geospatial datasets,
+                    prospectivity information, farm boundaries and
+                    interactive mapping functionality.
+                </p>
 
-
-            <div class="map-label">
-
-                GOLD PROSPECTIVITY MAP
+                <a href="https://geo-proj.vercel.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn primary">
+                    OPEN WEB GIS →
+                </a>
 
             </div>
 
@@ -477,347 +316,261 @@
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
+<!-- =============================================================
+     PROJECTS
+============================================================= -->
 
-<section
-    id="projects"
-    class="section">
+<section id="projects" class="section">
 
-    <div class="section-header">
+    <div class="container">
 
-        <span class="section-number">
-            02
-        </span>
+        <div class="section-heading">
 
-
-        <div>
-
-            <p class="eyebrow">
-                SELECTED PROJECTS
+            <p class="section-number">
+                02
             </p>
 
-
             <h2>
-                Geospatial Projects
+                Selected Projects
             </h2>
 
         </div>
 
-    </div>
+
+        <div class="projects-grid">
 
 
-    <div class="project-grid">
+            <!-- =================================================
+                 GOLD PROSPECTIVITY
+            ================================================== -->
+
+            <article class="project-card">
+
+                <a href="projects/gold-prospectivity.html"
+                   class="project-image map-image">
+
+                    <img src="assets/gold-prospectivity-map.png"
+                         alt="Gold Mineralisation Prospectivity Map"
+                         loading="lazy">
+
+                </a>
 
 
-        <!-- ================= GOLD PROJECT ================= -->
+                <div class="project-content">
 
-        <article class="project-card">
-
-            <a
-                href="projects/gold-prospectivity.html"
-                style="display:block; color:inherit;">
-
-                <div class="project-image gold-map">
-
-                    <span>
-                        GOLD PROSPECTIVITY
-                    </span>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <span class="project-category">
+                    <p class="project-category">
                         MINERAL EXPLORATION
-                    </span>
-
+                    </p>
 
                     <h3>
-
-                        Gold Mineralisation
-                        Prospectivity Mapping
-
+                        Gold Mineralisation Prospectivity Mapping
                     </h3>
 
-
                     <p>
-
-                        GIS and remote sensing integration
-                        for mapping areas with different
-                        levels of potential for gold
-                        mineralisation in Shamva District,
+                        GIS and Remote Sensing based modelling of gold
+                        mineralisation potential zones in Shamva District,
                         Zimbabwe.
-
                     </p>
 
-
-                    <div class="project-tools">
-
-                        <span>GIS</span>
-                        <span>Remote Sensing</span>
-                        <span>QGIS</span>
-                        <span>Google Earth Engine</span>
-
-                    </div>
-
-
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <a href="projects/gold-prospectivity.html"
+                       class="project-link">
                         VIEW PROJECT →
-
-                    </div>
-
-                </div>
-
-            </a>
-
-        </article>
-
-
-        <!-- ================= GROUNDWATER PROJECT ================= -->
-
-        <article class="project-card">
-
-            <a
-                href="projects/groundwater.html"
-                style="display:block; color:inherit;">
-
-                <div class="project-image map-image">
-
-                    <img
-                        src="assets/images/groundwater-potential-map.png"
-                        alt="Groundwater Potential Zone Map"
-                    >
+                    </a>
 
                 </div>
 
+            </article>
 
-                <div class="project-body">
 
-                    <span class="project-category">
+            <!-- =================================================
+                 GROUNDWATER
+            ================================================== -->
+
+            <article class="project-card">
+
+                <a href="projects/groundwater.html"
+                   class="project-image map-image">
+
+                    <img src="assets/images/groundwater-potential-map.png"
+                         alt="Groundwater Potential Zone Map"
+                         loading="lazy">
+
+                </a>
+
+
+                <div class="project-content">
+
+                    <p class="project-category">
                         HYDROGEOLOGY
-                    </span>
-
-
-                    <h3>
-
-                        Groundwater Potential
-                        Zone Modelling
-
-                    </h3>
-
-
-                    <p>
-
-                        Integration of GIS, remote sensing
-                        and geophysical information for
-                        groundwater potential assessment
-                        in Mapinga, Mashonaland West.
-
                     </p>
 
+                    <h3>
+                        Groundwater Potential Zone Modelling
+                    </h3>
 
-                    <div class="project-tools">
+                    <p>
+                        Integrated GIS, Remote Sensing and geophysical
+                        analysis for groundwater potential assessment
+                        in Mapinga, Mashonaland West, Zimbabwe.
+                    </p>
 
-                        <span>GIS</span>
-                        <span>Remote Sensing</span>
-                        <span>DEM</span>
-                        <span>Spatial Modelling</span>
-
-                    </div>
-
-
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <a href="projects/groundwater.html"
+                       class="project-link">
                         VIEW PROJECT →
-
-                    </div>
-
-                </div>
-
-            </a>
-
-        </article>
-
-
-        <!-- ================= LULC PROJECT ================= -->
-
-        <article class="project-card">
-
-            <a
-                href="projects/lulc.html"
-                style="display:block; color:inherit;">
-
-                <div class="project-image map-image">
-
-                    <img
-                        src="assets/lulc-map.png"
-                        alt="Land Use and Land Cover Classification Map"
-                    >
+                    </a>
 
                 </div>
 
+            </article>
 
-                <div class="project-body">
 
-                    <span class="project-category">
+            <!-- =================================================
+                 LULC
+            ================================================== -->
+
+            <article class="project-card">
+
+                <a href="projects/lulc.html"
+                   class="project-image map-image">
+
+                    <img src="assets/lulc-map.png"
+                         alt="Land Use and Land Cover Classification Map"
+                         loading="lazy">
+
+                </a>
+
+
+                <div class="project-content">
+
+                    <p class="project-category">
                         EARTH OBSERVATION
-                    </span>
-
-
-                    <h3>
-
-                        Land Use & Land Cover
-                        Classification
-
-                    </h3>
-
-
-                    <p>
-
-                        Satellite-based land cover mapping
-                        using Sentinel-2 multispectral imagery
-                        and Google Earth Engine.
-
                     </p>
 
+                    <h3>
+                        Land Use & Land Cover Classification
+                    </h3>
 
-                    <div class="project-tools">
+                    <p>
+                        Sentinel-2 satellite imagery and Google Earth
+                        Engine based land-use and land-cover classification
+                        and accuracy assessment.
+                    </p>
 
-                        <span>Sentinel-2</span>
-                        <span>Google Earth Engine</span>
-                        <span>Machine Learning</span>
-
-                    </div>
-
-
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <a href="projects/lulc.html"
+                       class="project-link">
                         VIEW PROJECT →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 WEB GIS
+            ================================================== -->
+
+            <article class="project-card">
+
+                <a href="https://geo-proj.vercel.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="webgis-project-link">
+
+                    <div class="project-image">
+
+                        <div style="
+                            height:100%;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            padding:30px;
+                            text-align:center;
+                            background:#111820;
+                            color:#ffffff;
+                        ">
+
+                            <div>
+
+                                <p style="
+                                    font-size:14px;
+                                    letter-spacing:2px;
+                                    margin-bottom:12px;
+                                ">
+                                    INTERACTIVE WEB GIS
+                                </p>
+
+                                <h3 style="
+                                    margin:0;
+                                    font-size:24px;
+                                ">
+                                    Goldmine Pegging DSS
+                                </h3>
+
+                                <p style="
+                                    margin-top:12px;
+                                    color:#aebac1;
+                                ">
+                                    Click to launch the live application
+                                </p>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
-                </div>
-
-            </a>
-
-        </article>
+                </a>
 
 
-        <!-- ================= WEB GIS PROJECT ================= -->
+                <div class="project-content">
 
-        <article class="project-card">
-
-            <a
-                href="https://geo-proj.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="webgis-project-link">
-
-                <div class="project-image webgis-map">
-
-                    <span>
+                    <p class="project-category">
                         WEB GIS
-                    </span>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <span class="project-category">
-                        GEOSPATIAL APPLICATION
-                    </span>
-
-
-                    <h3>
-                        Goldmine Pegging Decision
-                        Support System
-                    </h3>
-
-
-                    <p>
-
-                        Interactive Web GIS application for
-                        spatial visualisation, analysis and
-                        decision support for gold claim
-                        pegging.
-
                     </p>
 
+                    <h3>
+                        Goldmine Pegging Decision Support System
+                    </h3>
 
-                    <div class="project-tools">
+                    <p>
+                        Interactive Web GIS application for visualising
+                        gold prospectivity information and supporting
+                        spatial decision-making for claim pegging.
+                    </p>
 
-                        <span>GeoServer</span>
-                        <span>PostGIS</span>
-                        <span>Leaflet</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
-                        OPEN WEB GIS →
-
-                    </div>
+                    <a href="https://geo-proj.vercel.app/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        LAUNCH WEB GIS →
+                    </a>
 
                 </div>
 
-            </a>
+            </article>
 
-        </article>
 
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= REMOTE SENSING ================= -->
+<!-- =============================================================
+     REMOTE SENSING
+============================================================= -->
 
-<section
-    id="remote-sensing"
-    class="dark-section">
+<section id="remote-sensing" class="section">
 
-    <div class="section-header">
+    <div class="container">
 
-        <span class="section-number">
-            03
-        </span>
+        <div class="section-heading">
 
-
-        <div>
-
-            <p class="eyebrow">
-                EARTH OBSERVATION
+            <p class="section-number">
+                03
             </p>
-
 
             <h2>
                 Remote Sensing
@@ -825,99 +578,63 @@
 
         </div>
 
-    </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <h3>
+                    Satellite Image Processing
+                </h3>
+
+                <p>
+                    Landsat, Sentinel-1, Sentinel-2, ASTER and
+                    other Earth observation datasets.
+                </p>
+
+            </div>
 
 
-    <div class="capability-grid">
+            <div class="skill-card">
+
+                <h3>
+                    Image Classification
+                </h3>
+
+                <p>
+                    Supervised classification, machine learning,
+                    training samples and accuracy assessment.
+                </p>
+
+            </div>
 
 
-        <div class="capability">
+            <div class="skill-card">
 
-            <span class="capability-number">
-                01
-            </span>
+                <h3>
+                    Mineral Exploration
+                </h3>
 
+                <p>
+                    Hydrothermal alteration mapping, spectral indices,
+                    lineament analysis and mineral prospectivity modelling.
+                </p>
 
-            <h3>
-                Satellite Image Processing
-            </h3>
-
-
-            <p>
-
-                Multispectral and radar satellite imagery
-                processing for environmental and geological
-                applications.
-
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="capability">
+            <div class="skill-card">
 
-            <span class="capability-number">
-                02
-            </span>
+                <h3>
+                    Google Earth Engine
+                </h3>
 
+                <p>
+                    Cloud-based satellite image processing,
+                    classification, visualisation and spatial analysis.
+                </p>
 
-            <h3>
-                Spectral Analysis
-            </h3>
-
-
-            <p>
-
-                Use of spectral bands, band ratios and
-                indices for extracting information from
-                Earth observation imagery.
-
-            </p>
-
-        </div>
-
-
-        <div class="capability">
-
-            <span class="capability-number">
-                03
-            </span>
-
-
-            <h3>
-                Machine Learning
-            </h3>
-
-
-            <p>
-
-                Application of machine-learning workflows
-                for land-cover classification and spatial
-                analysis.
-
-            </p>
-
-        </div>
-
-
-        <div class="capability">
-
-            <span class="capability-number">
-                04
-            </span>
-
-
-            <h3>
-                Google Earth Engine
-            </h3>
-
-
-            <p>
-
-                Cloud-based processing and analysis of
-                large Earth observation datasets.
-
-            </p>
+            </div>
 
         </div>
 
@@ -926,25 +643,19 @@
 </section>
 
 
-<!-- ================= UAV & GNSS ================= -->
+<!-- =============================================================
+     UAV & GNSS
+============================================================= -->
 
-<section
-    id="uav"
-    class="section">
+<section id="uav" class="section">
 
-    <div class="section-header">
+    <div class="container">
 
-        <span class="section-number">
-            04
-        </span>
+        <div class="section-heading">
 
-
-        <div>
-
-            <p class="eyebrow">
-                FIELD & SURVEYING
+            <p class="section-number">
+                04
             </p>
-
 
             <h2>
                 UAV & GNSS
@@ -952,291 +663,61 @@
 
         </div>
 
-    </div>
 
+        <div class="skills-grid">
 
-    <div class="uav-grid">
+            <div class="skill-card">
 
-
-        <div>
-
-            <h3>
-                UAV Mapping
-            </h3>
-
-
-            <p>
-
-                Practical experience with drone-based
-                data acquisition and photogrammetric
-                processing.
-
-            </p>
-
-
-            <ul>
-
-                <li>
-                    UAV image acquisition
-                </li>
-
-                <li>
-                    Ground Control Points
-                </li>
-
-                <li>
-                    Orthomosaic generation
-                </li>
-
-                <li>
-                    Digital Elevation Models
-                </li>
-
-                <li>
-                    Contour generation
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                GNSS Surveying
-            </h3>
-
-
-            <p>
-
-                Field data collection and positioning
-                using RTK GNSS workflows and CORS
-                infrastructure.
-
-            </p>
-
-
-            <ul>
-
-                <li>
-                    RTK GNSS
-                </li>
-
-                <li>
-                    CORS data
-                </li>
-
-                <li>
-                    GCP establishment
-                </li>
-
-                <li>
-                    Coordinate collection
-                </li>
-
-                <li>
-                    Survey data processing
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="survey-box">
-
-            <strong>
-                UAV → GNSS → PHOTOGRAMMETRY
-            </strong>
-
-
-            <div class="workflow">
-
-                <span>
-                    FIELD
-                </span>
-
-                <b>
-                    →
-                </b>
-
-                <span>
-                    PROCESS
-                </span>
-
-                <b>
-                    →
-                </b>
-
-                <span>
-                    MAP
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= WEB GIS ================= -->
-
-<section
-    id="webgis"
-    class="webgis-section">
-
-    <div class="webgis-container">
-
-
-        <div class="section-header">
-
-            <span class="section-number">
-                05
-            </span>
-
-
-            <div>
-
-                <p class="eyebrow">
-                    GEOSPATIAL APPLICATION DEVELOPMENT
-                </p>
-
-
-                <h2>
-                    Web GIS & Decision Support
-                </h2>
-
-            </div>
-
-        </div>
-
-
-        <div class="webgis-grid">
-
-
-            <!-- WEB GIS DESCRIPTION -->
-
-            <div class="webgis-description">
+                <h3>
+                    UAV Mapping
+                </h3>
 
                 <p>
-
-                    My Web GIS work focuses on converting
-                    spatial datasets and analytical results
-                    into interactive applications that users
-                    can explore and query through a web browser.
-
+                    Drone-based aerial surveys, image acquisition,
+                    photogrammetry and mapping workflows.
                 </p>
-
-
-                <div class="architecture">
-
-                    <div>
-                        POSTGIS
-                    </div>
-
-                    <span>
-                        →
-                    </span>
-
-                    <div>
-                        GEOSERVER
-                    </div>
-
-                    <span>
-                        →
-                    </span>
-
-                    <div>
-                        WEB MAP
-                    </div>
-
-                </div>
-
-
-                <ul>
-
-                    <li>
-                        Interactive layer visualisation
-                    </li>
-
-                    <li>
-                        Spatial queries
-                    </li>
-
-                    <li>
-                        Map layer management
-                    </li>
-
-                    <li>
-                        Polygon digitisation
-                    </li>
-
-                    <li>
-                        Report generation
-                    </li>
-
-                    <li>
-                        Spatial data downloads
-                    </li>
-
-                </ul>
-
-
-                <div style="
-                    margin-top:30px;
-                ">
-
-                    <a
-                        href="https://geo-proj.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn primary">
-
-                        LAUNCH WEB GIS APPLICATION →
-
-                    </a>
-
-                </div>
 
             </div>
 
 
-            <!-- LIVE WEB GIS APPLICATION -->
+            <div class="skill-card">
 
-            <div class="webgis-live">
+                <h3>
+                    RTK GNSS
+                </h3>
 
-                <iframe
-                    src="https://geo-proj.vercel.app/"
-                    title="Goldmine Pegging Decision Support System"
-                    loading="lazy"
-                    allowfullscreen>
-                </iframe>
+                <p>
+                    High-precision GNSS surveying, ground control point
+                    establishment and CORS-based positioning.
+                </p>
 
-
-                <div class="webgis-launch">
-
-                    <p>
-
-                        Goldmine Pegging Decision Support System
-                        — interactive Web GIS application.
-
-                    </p>
+            </div>
 
 
-                    <a
-                        href="https://geo-proj.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn primary">
+            <div class="skill-card">
 
-                        OPEN FULL WEB GIS →
+                <h3>
+                    Photogrammetry
+                </h3>
 
-                    </a>
+                <p>
+                    Orthomosaic generation, DEM production, contours
+                    and 3D spatial products.
+                </p>
 
-                </div>
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Processing Software
+                </h3>
+
+                <p>
+                    Pix4D Mapper, Agisoft Metashape and other
+                    geospatial processing environments.
+                </p>
 
             </div>
 
@@ -1247,25 +728,86 @@
 </section>
 
 
-<!-- ================= TECHNICAL SKILLS ================= -->
+<!-- =============================================================
+     WEB GIS
+============================================================= -->
 
-<section
-    id="skills"
-    class="section">
+<section id="webgis" class="section">
 
-    <div class="section-header">
+    <div class="container">
 
-        <span class="section-number">
-            06
-        </span>
+        <div class="section-heading">
 
-
-        <div>
-
-            <p class="eyebrow">
-                TECHNICAL EXPERTISE
+            <p class="section-number">
+                05
             </p>
 
+            <h2>
+                Web GIS
+            </h2>
+
+        </div>
+
+
+        <div class="webgis-description">
+
+            <p>
+                Interactive Web GIS solutions that connect spatial
+                databases, geospatial services and web mapping
+                interfaces to support real-world decision-making.
+            </p>
+
+        </div>
+
+
+        <!-- LIVE WEB GIS APPLICATION -->
+
+        <div class="webgis-live">
+
+            <iframe
+                src="https://geo-proj.vercel.app/"
+                title="Goldmine Pegging Decision Support System"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+
+            <div class="webgis-launch">
+
+                <p>
+                    Goldmine Pegging Decision Support System —
+                    interactive Web GIS application.
+                </p>
+
+                <a href="https://geo-proj.vercel.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn primary">
+                    OPEN FULL WEB GIS →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     TECHNICAL SKILLS
+============================================================= -->
+
+<section id="skills" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-number">
+                06
+            </p>
 
             <h2>
                 Technical Skills
@@ -1273,123 +815,90 @@
 
         </div>
 
-    </div>
+
+        <div class="skills-grid">
 
 
-    <div class="skills-grid">
+            <div class="skill-card">
 
+                <h3>
+                    GIS
+                </h3>
 
-        <div class="skill-group">
-
-            <h3>
-                GIS
-            </h3>
-
-
-            <div class="skill-list">
-
-                <span>ArcGIS</span>
-                <span>QGIS</span>
-                <span>ArcMap</span>
-                <span>SAGA GIS</span>
-                <span>Global Mapper</span>
+                <p>
+                    QGIS · ArcGIS · ArcMap · SAGA GIS ·
+                    Global Mapper
+                </p>
 
             </div>
 
-        </div>
 
+            <div class="skill-card">
 
-        <div class="skill-group">
+                <h3>
+                    Remote Sensing
+                </h3>
 
-            <h3>
-                Remote Sensing
-            </h3>
-
-
-            <div class="skill-list">
-
-                <span>Google Earth Engine</span>
-                <span>Sentinel-1</span>
-                <span>Sentinel-2</span>
-                <span>Landsat</span>
-                <span>ASTER</span>
+                <p>
+                    Landsat · Sentinel · ASTER · Google Earth Engine ·
+                    PCA · Image Classification
+                </p>
 
             </div>
 
-        </div>
 
+            <div class="skill-card">
 
-        <div class="skill-group">
+                <h3>
+                    Web GIS
+                </h3>
 
-            <h3>
-                Programming
-            </h3>
-
-
-            <div class="skill-list">
-
-                <span>Python</span>
-                <span>JavaScript</span>
-                <span>SQL</span>
-                <span>HTML</span>
-                <span>CSS</span>
+                <p>
+                    Leaflet · OpenLayers · GeoServer · MapStore ·
+                    PostGIS
+                </p>
 
             </div>
 
-        </div>
 
+            <div class="skill-card">
 
-        <div class="skill-group">
+                <h3>
+                    Programming
+                </h3>
 
-            <h3>
-                Geospatial Databases
-            </h3>
-
-
-            <div class="skill-list">
-
-                <span>PostGIS</span>
-                <span>PostgreSQL</span>
-                <span>GeoServer</span>
-                <span>Spatial SQL</span>
+                <p>
+                    Python · JavaScript · HTML · CSS ·
+                    Geospatial Automation
+                </p>
 
             </div>
 
-        </div>
 
+            <div class="skill-card">
 
-        <div class="skill-group">
+                <h3>
+                    UAV & GNSS
+                </h3>
 
-            <h3>
-                UAV & Survey
-            </h3>
-
-
-            <div class="skill-list">
-
-                <span>UAV Mapping</span>
-                <span>RTK GNSS</span>
-                <span>CORS</span>
-                <span>GCPs</span>
+                <p>
+                    UAV Surveying · RTK GNSS · CORS ·
+                    GCP Establishment · Photogrammetry
+                </p>
 
             </div>
 
-        </div>
 
+            <div class="skill-card">
 
-        <div class="skill-group">
+                <h3>
+                    Geospatial Analysis
+                </h3>
 
-            <h3>
-                Photogrammetry
-            </h3>
-
-
-            <div class="skill-list">
-
-                <span>Pix4D</span>
-                <span>Agisoft Metashape</span>
-                <span>DEM Generation</span>
-                <span>Orthomosaics</span>
+                <p>
+                    Spatial Analysis · Weighted Overlay ·
+                    Terrain Analysis · Suitability Modelling
+                </p>
 
             </div>
 
@@ -1400,111 +909,41 @@
 </section>
 
 
-<!-- ================= CV ================= -->
+<!-- =============================================================
+     CV
+============================================================= -->
 
-<section
-    id="cv"
-    class="cv-section">
+<section id="cv" class="section">
 
-    <div>
+    <div class="container">
 
-        <p class="eyebrow">
-            PROFESSIONAL PROFILE
-        </p>
+        <div class="section-heading">
 
-
-        <h2>
-            Interested in my background?
-        </h2>
-
-
-        <p>
-
-            Download my professional CV for a detailed
-            overview of my education, technical capabilities,
-            projects and experience.
-
-        </p>
-
-
-        <a
-            href="assets/cv.pdf"
-            class="btn primary"
-            download>
-
-            Download CV
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section
-    id="contact"
-    class="section contact-section">
-
-    <div class="section-header">
-
-        <span class="section-number">
-            07
-        </span>
-
-
-        <div>
-
-            <p class="eyebrow">
-                CONTACT
+            <p class="section-number">
+                07
             </p>
 
-
             <h2>
-                Let's Work With Geospatial Data.
+                Curriculum Vitae
             </h2>
 
         </div>
 
-    </div>
 
-
-    <div class="contact-grid">
-
-
-        <div>
+        <div class="cv-content">
 
             <p>
-
-                Whether you are interested in GIS analysis,
-                remote sensing, Web GIS development,
-                geospatial research or spatial
-                decision-support systems, I would be glad
-                to connect.
-
+                Download my current Curriculum Vitae to view my
+                academic background, professional experience,
+                technical skills and geospatial projects.
             </p>
 
-        </div>
 
-
-        <div class="contact-details">
-
-            <a href="mailto:mosesmkondani@gmail.com">
-
-                mosesmkondani@gmail.com
-
+            <a href="assets/cv.pdf"
+               target="_blank"
+               class="btn primary">
+                VIEW / DOWNLOAD CV →
             </a>
-
-
-            <a href="#">
-                LinkedIn
-            </a>
-
-
-            <span>
-                Zimbabwe
-            </span>
 
         </div>
 
@@ -1513,42 +952,84 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =============================================================
+     CONTACT
+============================================================= -->
 
-<footer>
+<section id="contact" class="section">
 
-    <div>
+    <div class="container">
 
-        <strong>
-            MOSES MKONDANI
-        </strong>
+        <div class="section-heading">
+
+            <p class="section-number">
+                08
+            </p>
+
+            <h2>
+                Contact
+            </h2>
+
+        </div>
 
 
-        <p>
+        <div class="contact-content">
 
-            Geospatial Scientist • GIS • Remote Sensing • Web GIS
+            <p>
+                I am open to opportunities in GIS, Remote Sensing,
+                Earth Observation, Mineral Exploration, Web GIS,
+                UAV mapping and geospatial science.
+            </p>
 
-        </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:mosesmkondani@gmail.com">
+                    mosesmkondani@gmail.com
+                </a>
+
+                <a href="#" target="_blank">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
-    <div>
 
-        © <span id="year"></span>
-        Moses Mkondani
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Moses Mkondani. All rights reserved.
+        </p>
+
+        <p>
+            GIS · Remote Sensing · UAV · GNSS · Web GIS
+        </p>
 
     </div>
 
 </footer>
 
 
-<!-- ================= SCRIPTS ================= -->
+<!-- =============================================================
+     LEAFLET
+============================================================= -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+<!-- Your JavaScript -->
 <script src="script.js"></script>
-
 
 </body>
 
