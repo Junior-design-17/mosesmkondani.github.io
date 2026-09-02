@@ -9,194 +9,41 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>
-        Land Use and Land Cover Mapping | Moses Mkondani
+        Land Use & Land Cover Classification | Moses Mkondani
     </title>
 
     <meta name="description"
-          content="Land Use and Land Cover mapping project using Sentinel-2 satellite imagery, Google Earth Engine and machine learning.">
+          content="Land Use and Land Cover classification using Sentinel-2 imagery, Google Earth Engine and GIS techniques.">
 
-    <link rel="stylesheet"
-          href="../style.css">
-
-    <style>
-
-        /* ================================
-           PROJECT PAGE
-        ================================= */
-
-        .project-page {
-            max-width: 1100px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-
-
-        /* ================================
-           PROJECT HEADER
-        ================================= */
-
-        .project-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .project-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-
-        .project-header p {
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
-
-
-        /* ================================
-           SECTIONS
-        ================================= */
-
-        .project-section {
-            margin-bottom: 50px;
-        }
-
-        .project-section h2 {
-            font-size: 1.7rem;
-            margin-bottom: 18px;
-        }
-
-        .project-section p {
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-
-        /* ================================
-           MAP
-        ================================= */
-
-        .map-container {
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .map-container img {
-            display: block;
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .map-caption {
-            margin-top: 12px;
-            font-size: 0.95rem;
-            opacity: 0.75;
-        }
-
-
-        /* ================================
-           INFORMATION CARDS
-        ================================= */
-
-        .info-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .info-card {
-            padding: 22px;
-            border-radius: 10px;
-            background: rgba(128, 128, 128, 0.08);
-        }
-
-        .info-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .info-card p {
-            margin-bottom: 0;
-        }
-
-
-        /* ================================
-           RESULTS TABLE
-        ================================= */
-
-        .results-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .results-table th,
-        .results-table td {
-            padding: 12px;
-            border: 1px solid rgba(128, 128, 128, 0.3);
-            text-align: left;
-        }
-
-        .results-table th {
-            font-weight: 600;
-        }
-
-
-        /* ================================
-           BACK BUTTON
-        ================================= */
-
-        .back-button {
-            display: inline-block;
-            margin-top: 18px;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            border: 1px solid currentColor;
-        }
-
-
-        /* ================================
-           MOBILE RESPONSIVENESS
-        ================================= */
-
-        @media (max-width: 768px) {
-
-            .project-page {
-                padding: 35px 15px;
-            }
-
-            .project-header h1 {
-                font-size: 2rem;
-            }
-
-            .project-section h2 {
-                font-size: 1.5rem;
-            }
-
-            .results-table {
-                font-size: 0.9rem;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="../style.css">
 
 </head>
-
 
 <body>
 
 
-    <!-- =================================
-         NAVIGATION
-    ================================== -->
+<!-- ================= NAVIGATION ================= -->
 
-    <header>
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+
+            <span>MM</span>
+
+            <div>
+
+                <strong>MOSES MKONDANI</strong>
+
+                <small>
+                    GIS & GEOSPATIAL SCIENTIST
+                </small>
+
+            </div>
+
+        </a>
+
 
         <nav>
 
@@ -222,622 +69,995 @@
 
         </nav>
 
-    </header>
+    </div>
+
+</header>
 
 
 
-    <!-- =================================
-         MAIN CONTENT
-    ================================== -->
+<!-- ================= PROJECT HERO ================= -->
 
-    <main class="project-page">
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            GIS • REMOTE SENSING • EARTH OBSERVATION
+        </p>
 
 
-        <!-- PROJECT HEADER -->
+        <h1>
 
-        <section class="project-header">
+            Land Use & Land Cover
+            <span>Classification</span>
 
-            <h1>
-                Land Use and Land Cover Mapping
-            </h1>
+        </h1>
 
-            <p>
-                Satellite Remote Sensing and Machine Learning
-            </p>
 
-            <a href="../index.html#projects"
-               class="back-button">
+        <p class="hero-description">
 
-                ← Back to Projects
+            Satellite-based Land Use and Land Cover classification
+            using Sentinel-2 multispectral imagery, Google Earth
+            Engine and GIS techniques to map and analyse the
+            spatial distribution of major land-cover classes.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="../index.html"
+               class="btn secondary">
+
+                ← Back to Portfolio
 
             </a>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
 
-        <!-- =================================
-             PROJECT OVERVIEW
-        ================================== -->
+<!-- ================= PROJECT OVERVIEW ================= -->
 
-        <section class="project-section">
+<section class="section">
 
-            <h2>
-                Project Overview
-            </h2>
+    <div class="section-header">
 
-            <p>
-                This project involved the development of a Land Use and
-                Land Cover (LULC) classification map using satellite
-                remote sensing and machine learning techniques.
+        <div class="section-number">
+            01
+        </div>
+
+        <h2>
+            Project Overview
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p class="lead">
+
+                Land Use and Land Cover mapping was undertaken
+                using Earth observation data and GIS techniques
+                to identify and classify the major land-cover
+                categories within the study area.
+
             </p>
 
+
             <p>
-                The objective was to identify and map major land-cover
-                classes within the study area and generate spatial
-                information that can support environmental monitoring,
-                land management and geospatial decision-making.
+
+                Sentinel-2 multispectral imagery was used as the
+                primary satellite data source, while Google Earth
+                Engine provided the cloud-based environment for
+                image processing, classification and accuracy
+                assessment.
+
             </p>
 
-        </section>
+
+            <p>
+
+                The resulting LULC map provides spatial information
+                that can support land-use planning, environmental
+                monitoring, agricultural assessment and natural
+                resource management.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h3>
+                Project Focus
+            </h3>
+
+            <p>
+                Land Use & Land Cover Mapping
+            </p>
+
+            <div class="location">
+                Remote Sensing • GIS • Earth Observation
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
-        <!-- =================================
-             LULC MAP
-        ================================== -->
+<!-- ================= OBJECTIVES ================= -->
 
-        <section class="project-section">
+<section class="dark-section">
 
-            <h2>
-                LULC Classification Map
-            </h2>
+    <div class="section-header">
 
-            <div class="map-container">
+        <div class="section-number">
+            02
+        </div>
 
-                <img
-                    src="../assets/images/lulc-map.png"
-                    alt="Land Use and Land Cover Classification Map">
+        <h2>
+            Objectives
+        </h2>
 
-                <p class="map-caption">
+    </div>
 
-                    Land Use and Land Cover classification map
-                    produced from Sentinel-2 satellite imagery.
 
-                </p>
+    <div class="capability-grid">
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                01
+            </span>
+
+            <h3>
+                Land Cover Mapping
+            </h3>
+
+            <p>
+
+                Identify and map the major land-use and
+                land-cover classes within the study area.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                02
+            </span>
+
+            <h3>
+                Satellite Analysis
+            </h3>
+
+            <p>
+
+                Utilise multispectral Sentinel-2 imagery
+                to extract useful information about the
+                Earth's surface.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                03
+            </span>
+
+            <h3>
+                Machine Learning
+            </h3>
+
+            <p>
+
+                Apply a supervised machine-learning
+                classification workflow to classify
+                different land-cover types.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                04
+            </span>
+
+            <h3>
+                Accuracy Assessment
+            </h3>
+
+            <p>
+
+                Evaluate the performance of the resulting
+                classification using statistical accuracy
+                measures.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DATA ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            03
+        </div>
+
+        <h2>
+            Data & Classification
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-group">
+
+            <h3>
+                Satellite Data
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Sentinel-2</span>
+                <span>Multispectral Imagery</span>
+                <span>Earth Observation</span>
 
             </div>
 
-        </section>
+        </div>
 
 
+        <div class="skill-group">
 
-        <!-- =================================
-             DATA AND TECHNOLOGY
-        ================================== -->
+            <h3>
+                Processing
+            </h3>
 
-        <section class="project-section">
+            <div class="skill-list">
 
-            <h2>
-                Data & Technology
-            </h2>
-
-            <div class="info-grid">
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Satellite Data
-                    </h3>
-
-                    <p>
-                        Sentinel-2 multispectral satellite imagery.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Processing Platform
-                    </h3>
-
-                    <p>
-                        Google Earth Engine (GEE).
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Classification
-                    </h3>
-
-                    <p>
-                        Supervised machine-learning classification.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        GIS Software
-                    </h3>
-
-                    <p>
-                        QGIS and other geospatial processing tools.
-                    </p>
-
-                </div>
+                <span>Google Earth Engine</span>
+                <span>Image Processing</span>
+                <span>Cloud Processing</span>
 
             </div>
 
-        </section>
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                GIS
+            </h3>
+
+            <div class="skill-list">
+
+                <span>QGIS</span>
+                <span>Spatial Analysis</span>
+                <span>Cartography</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Classification
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Training Samples</span>
+                <span>Supervised Classification</span>
+                <span>Machine Learning</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Land Cover
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Water Bodies</span>
+                <span>Built-up Areas</span>
+                <span>Croplands</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Vegetation & Soil
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Vegetation</span>
+                <span>Wooded Grassland</span>
+                <span>Bare Land</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
-        <!-- =================================
-             METHODOLOGY
-        ================================== -->
+<!-- ================= METHODOLOGY ================= -->
 
-        <section class="project-section">
+<section class="webgis-section">
+
+    <div class="webgis-container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                04
+            </div>
 
             <h2>
                 Methodology
             </h2>
 
-            <p>
-
-                Sentinel-2 multispectral satellite imagery was acquired
-                and prepared for land-cover classification. The imagery
-                was processed to support supervised classification of
-                the study area.
-
-            </p>
-
-            <p>
-
-                Training samples were developed for the identified
-                land-cover classes. A machine-learning classification
-                workflow was then implemented in Google Earth Engine
-                to produce the LULC classification.
-
-            </p>
-
-            <p>
-
-                The classified imagery was subsequently subjected to
-                accuracy assessment to evaluate the performance of the
-                classification. The final result was exported and
-                prepared for GIS visualisation and Web GIS integration.
-
-            </p>
-
-        </section>
+        </div>
 
 
+        <div class="architecture">
 
-        <!-- =================================
-             LAND COVER CLASSES
-        ================================== -->
-
-        <section class="project-section">
-
-            <h2>
-                Land-Cover Classes
-            </h2>
-
-            <div class="info-grid">
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Water Bodies
-                    </h3>
-
-                    <p>
-                        Rivers, dams and other surface-water features.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Built-up Areas
-                    </h3>
-
-                    <p>
-                        Buildings, settlements and developed surfaces.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Croplands
-                    </h3>
-
-                    <p>
-                        Agricultural land used for crop production.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Vegetation
-                    </h3>
-
-                    <p>
-                        Vegetated areas classified separately from
-                        wooded grassland.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Wooded Grassland
-                    </h3>
-
-                    <p>
-                        Areas characterised by grassland with
-                        scattered woody vegetation.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Bare Land
-                    </h3>
-
-                    <p>
-                        Exposed soil and other surfaces with limited
-                        vegetation cover.
-                    </p>
-
-                </div>
-
+            <div>
+                SENTINEL-2
             </div>
 
-        </section>
+            <span>→</span>
 
-
-
-        <!-- =================================
-             RESULTS
-        ================================== -->
-
-        <section class="project-section">
-
-            <h2>
-                Classification Results
-            </h2>
-
-            <table class="results-table">
-
-                <thead>
-
-                    <tr>
-
-                        <th>
-                            Land-Cover Class
-                        </th>
-
-                        <th>
-                            Area (%)
-                        </th>
-
-                    </tr>
-
-                </thead>
-
-
-                <tbody>
-
-
-                    <tr>
-
-                        <td>
-                            Water Bodies
-                        </td>
-
-                        <td>
-                            0.72%
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Built-up Areas
-                        </td>
-
-                        <td>
-                            2.73%
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Croplands
-                        </td>
-
-                        <td>
-                            14.10%
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Vegetation
-                        </td>
-
-                        <td>
-                            9.42%
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Wooded Grassland
-                        </td>
-
-                        <td>
-                            50.30%
-                        </td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            Bare Land
-                        </td>
-
-                        <td>
-                            22.70%
-                        </td>
-
-                    </tr>
-
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-
-        <!-- =================================
-             ACCURACY ASSESSMENT
-        ================================== -->
-
-        <section class="project-section">
-
-            <h2>
-                Accuracy Assessment
-            </h2>
-
-            <div class="info-grid">
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Overall Accuracy
-                    </h3>
-
-                    <p>
-                        95.61%
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Kappa Coefficient
-                    </h3>
-
-                    <p>
-                        0.9561
-                    </p>
-
-                </div>
-
+            <div>
+                PRE-PROCESSING
             </div>
 
+            <span>→</span>
 
-            <p style="margin-top: 20px;">
-
-                The classification achieved an overall accuracy of
-                approximately 95.61%, with a Kappa coefficient of
-                approximately 0.9561.
-
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================
-             APPLICATIONS
-        ================================== -->
-
-        <section class="project-section">
-
-            <h2>
-                Applications
-            </h2>
-
-            <p>
-
-                The resulting LULC dataset can support land management,
-                environmental monitoring, agricultural assessment,
-                settlement analysis and spatial decision-making.
-
-            </p>
-
-            <p>
-
-                The LULC layer can also be integrated with other
-                geospatial datasets within a Web GIS environment to
-                support interactive spatial visualisation and analysis.
-
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================
-             TECHNICAL SKILLS
-        ================================== -->
-
-        <section class="project-section">
-
-            <h2>
-                Technical Skills Demonstrated
-            </h2>
-
-
-            <div class="info-grid">
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Remote Sensing
-                    </h3>
-
-                    <p>
-                        Sentinel-2 multispectral image analysis.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Google Earth Engine
-                    </h3>
-
-                    <p>
-                        Cloud-based satellite image processing
-                        and classification.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Machine Learning
-                    </h3>
-
-                    <p>
-                        Supervised land-cover classification.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        GIS
-                    </h3>
-
-                    <p>
-                        Spatial analysis, cartography and
-                        map production.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Accuracy Assessment
-                    </h3>
-
-                    <p>
-                        Evaluation of classification performance.
-                    </p>
-
-                </div>
-
-
-                <div class="info-card">
-
-                    <h3>
-                        Web GIS
-                    </h3>
-
-                    <p>
-                        Preparation of spatial data for
-                        web-based visualisation.
-                    </p>
-
-                </div>
-
-
+            <div>
+                TRAINING SAMPLES
             </div>
 
-        </section>
+            <span>→</span>
 
+            <div>
+                CLASSIFICATION
+            </div>
 
-    </main>
+            <span>→</span>
 
+            <div>
+                ACCURACY
+            </div>
 
+            <span>→</span>
 
-    <!-- =================================
-         FOOTER
-    ================================== -->
+            <div>
+                LULC MAP
+            </div>
 
-    <footer>
+        </div>
+
 
         <p>
-            © 2026 Moses Mkondani | Geospatial Scientist
+
+            Sentinel-2 multispectral imagery was prepared for
+            analysis and representative training samples were
+            developed for the identified land-cover classes.
+            A supervised machine-learning classification workflow
+            was then applied to generate the LULC dataset,
+            followed by accuracy assessment and map production.
+
         </p>
 
-    </footer>
+    </div>
+
+</section>
+
+
+
+<!-- ================= LULC MAP ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            05
+        </div>
+
+        <h2>
+            Land Use & Land Cover Map
+        </h2>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <img
+            src="../assets/images/lulc-map.png"
+            alt="Land Use and Land Cover Classification Map"
+            style="
+                width:100%;
+                display:block;
+                height:auto;
+            "
+        >
+
+
+        <div class="project-body">
+
+            <p class="project-category">
+                FINAL GIS OUTPUT
+            </p>
+
+
+            <h3>
+                Land Use & Land Cover Classification Map
+            </h3>
+
+
+            <p>
+
+                The final classification identifies six major
+                land-cover classes: Water Bodies, Built-up Areas,
+                Croplands, Vegetation, Wooded Grassland and
+                Bare Land.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RESULTS ================= -->
+
+<section class="dark-section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            06
+        </div>
+
+        <h2>
+            Classification Results
+        </h2>
+
+    </div>
+
+
+    <div class="capability-grid">
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                50.3%
+            </span>
+
+            <h3>
+                Wooded Grassland
+            </h3>
+
+            <p>
+
+                Wooded grassland represents the largest
+                mapped land-cover class.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                22.7%
+            </span>
+
+            <h3>
+                Bare Land
+            </h3>
+
+            <p>
+
+                Bare land forms a significant proportion
+                of the mapped area.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                14.1%
+            </span>
+
+            <h3>
+                Croplands
+            </h3>
+
+            <p>
+
+                Cropland areas account for approximately
+                14.1% of the mapped area.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                9.42%
+            </span>
+
+            <h3>
+                Vegetation
+            </h3>
+
+            <p>
+
+                Vegetation accounts for approximately
+                9.42% of the mapped area.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                2.73%
+            </span>
+
+            <h3>
+                Built-up Areas
+            </h3>
+
+            <p>
+
+                Built-up areas represent approximately
+                2.73% of the mapped area.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                0.72%
+            </span>
+
+            <h3>
+                Water Bodies
+            </h3>
+
+            <p>
+
+                Water bodies represent approximately
+                0.72% of the mapped area.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ACCURACY ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            07
+        </div>
+
+        <h2>
+            Accuracy Assessment
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-group">
+
+            <h3>
+                Overall Accuracy
+            </h3>
+
+            <div class="skill-list">
+
+                <span>
+                    95.61%
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Kappa Coefficient
+            </h3>
+
+            <div class="skill-list">
+
+                <span>
+                    0.9561
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Assessment
+            </h3>
+
+            <div class="skill-list">
+
+                <span>
+                    High Classification Agreement
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <p style="
+        max-width:800px;
+        margin:50px auto 0;
+        text-align:center;
+    ">
+
+        The classification achieved an overall accuracy of
+        approximately 95.61%, with a Kappa coefficient of
+        approximately 0.9561.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================= APPLICATIONS ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            08
+        </div>
+
+        <h2>
+            Applications
+        </h2>
+
+    </div>
+
+
+    <div class="capability-grid">
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                01
+            </span>
+
+            <h3>
+                Land-use Planning
+            </h3>
+
+            <p>
+
+                Support spatial planning and land-management
+                decisions.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                02
+            </span>
+
+            <h3>
+                Environmental Monitoring
+            </h3>
+
+            <p>
+
+                Provide spatial information for monitoring
+                environmental conditions and landscape change.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                03
+            </span>
+
+            <h3>
+                Agricultural Assessment
+            </h3>
+
+            <p>
+
+                Support assessment and monitoring of
+                agricultural land.
+
+            </p>
+
+        </div>
+
+
+        <div class="capability">
+
+            <span class="capability-number">
+                04
+            </span>
+
+            <h3>
+                Natural Resources
+            </h3>
+
+            <p>
+
+                Provide land-cover information for
+                natural-resource management.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TECHNICAL SKILLS ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            09
+        </div>
+
+        <h2>
+            Technical Skills Demonstrated
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-group">
+
+            <h3>
+                Remote Sensing
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Sentinel-2</span>
+                <span>Multispectral Analysis</span>
+                <span>Image Processing</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Google Earth Engine
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Cloud Processing</span>
+                <span>Classification</span>
+                <span>Accuracy Assessment</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                GIS
+            </h3>
+
+            <div class="skill-list">
+
+                <span>QGIS</span>
+                <span>Spatial Analysis</span>
+                <span>Cartography</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>
+                Machine Learning
+            </h3>
+
+            <div class="skill-list">
+
+                <span>Training Samples</span>
+                <span>Supervised Classification</span>
+                <span>Classification Accuracy</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BACK ================= -->
+
+<section class="cv-section">
+
+    <div>
+
+        <p class="eyebrow">
+            GIS PORTFOLIO
+        </p>
+
+
+        <h2>
+            Explore More Projects
+        </h2>
+
+
+        <p>
+
+            Return to the main portfolio to explore additional
+            GIS, mineral exploration, groundwater, UAV, GNSS
+            and Web GIS projects.
+
+        </p>
+
+
+        <a href="../index.html"
+           class="btn primary">
+
+            BACK TO PORTFOLIO
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © <span id="year"></span>
+        Moses Mkondani
+
+    </p>
+
+
+    <p>
+
+        GIS • Remote Sensing • Geospatial Science
+
+    </p>
+
+</footer>
+
+
+<script src="../script.js"></script>
 
 
 </body>
