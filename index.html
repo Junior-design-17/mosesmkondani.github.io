@@ -432,48 +432,1114 @@
 
 </article>
 
-    <!-- LULC PROJECT -->
+<!DOCTYPE html>
+<html lang="en">
 
-    <article class="project-card">
+<head>
 
-        <div class="project-image lulc-map">
+    <meta charset="UTF-8">
 
-            <span>
-                LULC CLASSIFICATION
-            </span>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-        </div>
+    <title>Land Use and Land Cover Mapping | Moses Mkondani</title>
 
-        <div class="project-body">
+    <meta name="description"
+          content="Land Use and Land Cover classification project by Moses Mkondani using Sentinel-2 multispectral imagery and Google Earth Engine.">
 
-            <span class="project-category">
-                EARTH OBSERVATION
-            </span>
+    <link rel="stylesheet"
+          href="../style.css">
 
-            <h3>
-                Land Use & Land Cover Classification
-            </h3>
+    <style>
 
-            <p>
+        /* ================= PROJECT PAGE ================= */
 
-                Satellite-based land cover mapping using
-                multispectral Earth observation data and
-                machine-learning classification workflows.
+        .project-page {
+            padding: 100px 8%;
+            max-width: 1400px;
+            margin: auto;
+        }
 
-            </p>
+        .project-hero {
+            margin-bottom: 60px;
+        }
 
-            <div class="project-tools">
+        .project-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4.5rem);
+            line-height: 1.05;
+            margin: 15px 0 20px;
+        }
 
-                <span>Sentinel-2</span>
-                <span>GEE</span>
-                <span>Random Forest</span>
-                <span>XGBoost</span>
+        .project-hero p {
+            max-width: 800px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .project-location {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ================= MAP ================= */
+
+        .map-container {
+            margin: 50px 0 70px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .map-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .map-caption {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.75;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .project-section {
+            margin-bottom: 70px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .project-section p {
+            max-width: 900px;
+            line-height: 1.8;
+        }
+
+        /* ================= INFO CARDS ================= */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            padding: 30px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .info-card p {
+            line-height: 1.7;
+        }
+
+        /* ================= METHODOLOGY ================= */
+
+        .methodology {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .method-step {
+            padding: 25px;
+            border-left: 4px solid #6d95a4;
+            background: rgba(109,149,164,0.06);
+        }
+
+        .method-step span {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .method-step h3 {
+            margin: 10px 0;
+        }
+
+        .method-step p {
+            line-height: 1.7;
+        }
+
+        /* ================= CLASS TABLE ================= */
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.12);
+            text-align: left;
+        }
+
+        .results-table th {
+            font-weight: 700;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills-project {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .skills-project span {
+            padding: 9px 14px;
+            border-radius: 20px;
+            background: rgba(109,149,164,0.1);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* ================= LIST ================= */
+
+        .project-list {
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+        /* ================= CTA ================= */
+
+        .project-cta {
+            margin-top: 80px;
+            padding: 50px;
+            border-radius: 12px;
+            background: rgba(109,149,164,0.08);
+            text-align: center;
+        }
+
+        .project-cta h2 {
+            margin-bottom: 15px;
+        }
+
+        .project-cta p {
+            margin: 0 auto 25px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .methodology {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .project-page {
+                padding: 70px 5%;
+            }
+
+            .project-hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .project-hero p {
+                font-size: 16px;
+            }
+
+            .project-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .project-cta {
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html"
+           class="logo">
+
+            <span>MK</span>
+
+            <div>
+
+                <strong>MOSES MKONDANI</strong>
+
+                <small>
+                    GEOSPATIAL SCIENTIST
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle"
+                id="menuToggle">
+
+            ☰
+
+        </button>
+
+
+        <nav id="navMenu">
+
+            <a href="../index.html#home">
+                Home
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#remote-sensing">
+                Remote Sensing
+            </a>
+
+            <a href="../index.html#uav">
+                UAV & GNSS
+            </a>
+
+            <a href="../index.html#webgis">
+                Web GIS
+            </a>
+
+            <a href="../index.html#skills">
+                Skills
+            </a>
+
+            <a href="../index.html#cv">
+                CV
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PROJECT CONTENT ================= -->
+
+<main class="project-page">
+
+
+    <!-- PROJECT HERO -->
+
+    <section class="project-hero">
+
+        <a href="../index.html#projects"
+           class="back-link">
+
+            ← Back to Projects
+
+        </a>
+
+
+        <p class="eyebrow">
+            EARTH OBSERVATION • LAND COVER MAPPING
+        </p>
+
+
+        <h1>
+            Land Use & Land Cover
+            Classification
+        </h1>
+
+
+        <p class="project-location">
+            Remote Sensing and GIS Analysis
+        </p>
+
+
+        <p>
+
+            A satellite-based Land Use and Land Cover (LULC)
+            mapping project using Sentinel-2 multispectral
+            imagery and Google Earth Engine to classify and
+            analyse the spatial distribution of major land
+            cover classes.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= MAP ================= -->
+
+    <section class="map-container">
+
+        <img
+            src="../assets/images/lulc-map.png"
+            alt="Land Use and Land Cover Classification Map"
+            loading="lazy"
+        >
+
+        <p class="map-caption">
+
+            Land Use and Land Cover Classification Map
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= PROJECT OVERVIEW ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            PROJECT OVERVIEW
+        </p>
+
+        <h2>
+            Mapping the Landscape
+        </h2>
+
+
+        <p>
+
+            Land Use and Land Cover mapping provides important
+            spatial information for understanding how landscapes
+            are distributed and used. This project applies
+            Earth observation data and GIS techniques to produce
+            a thematic LULC map showing the distribution of
+            different land-cover classes.
+
+        </p>
+
+
+        <p>
+
+            The resulting map can support environmental
+            monitoring, land management, agricultural planning,
+            natural-resource assessment and spatial
+            decision-making.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= DATA & TECHNOLOGY ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            DATA & TECHNOLOGY
+        </p>
+
+        <h2>
+            Data and Tools
+        </h2>
+
+
+        <div class="info-grid">
+
+
+            <div class="info-card">
+
+                <h3>
+                    Satellite Data
+                </h3>
+
+                <p>
+
+                    Sentinel-2 multispectral Earth observation
+                    imagery was used as the primary satellite
+                    data source.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    Processing Platform
+                </h3>
+
+                <p>
+
+                    Google Earth Engine was used for satellite
+                    image processing, classification and
+                    accuracy assessment.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    GIS
+                </h3>
+
+                <p>
+
+                    GIS techniques were used for spatial
+                    preparation, visualisation, analysis and
+                    map production.
+
+                </p>
 
             </div>
 
         </div>
 
-    </article>
+    </section>
+
+
+
+    <!-- ================= METHODOLOGY ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            METHODOLOGY
+        </p>
+
+        <h2>
+            LULC Mapping Workflow
+        </h2>
+
+
+        <div class="methodology">
+
+
+            <div class="method-step">
+
+                <span>
+                    STEP 01
+                </span>
+
+                <h3>
+                    Satellite Data Preparation
+                </h3>
+
+                <p>
+
+                    Sentinel-2 imagery was prepared for analysis
+                    and restricted to the study area.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>
+                    STEP 02
+                </span>
+
+                <h3>
+                    Image Processing
+                </h3>
+
+                <p>
+
+                    Relevant spectral information was prepared
+                    for use in the supervised classification
+                    workflow.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>
+                    STEP 03
+                </span>
+
+                <h3>
+                    Training Data
+                </h3>
+
+                <p>
+
+                    Representative training samples were
+                    prepared for the identified land-cover
+                    classes.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>
+                    STEP 04
+                </span>
+
+                <h3>
+                    Classification
+                </h3>
+
+                <p>
+
+                    A supervised machine-learning classification
+                    workflow was applied to generate the LULC
+                    classes.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>
+                    STEP 05
+                </span>
+
+                <h3>
+                    Accuracy Assessment
+                </h3>
+
+                <p>
+
+                    Classification performance was evaluated
+                    using overall accuracy and the Kappa
+                    coefficient.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-step">
+
+                <span>
+                    STEP 06
+                </span>
+
+                <h3>
+                    Map Production
+                </h3>
+
+                <p>
+
+                    The classified output was prepared and
+                    visualised as a final LULC map for
+                    interpretation and presentation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= LULC CLASSES ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            CLASSIFICATION
+        </p>
+
+        <h2>
+            Land Cover Classes
+        </h2>
+
+
+        <p>
+
+            The classification identified six major land-cover
+            classes within the study area.
+
+        </p>
+
+
+        <div class="skills-project">
+
+            <span>
+                Water Bodies
+            </span>
+
+            <span>
+                Built-up Areas
+            </span>
+
+            <span>
+                Croplands
+            </span>
+
+            <span>
+                Vegetation
+            </span>
+
+            <span>
+                Wooded Grassland
+            </span>
+
+            <span>
+                Bare Land
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= RESULTS ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            RESULTS
+        </p>
+
+        <h2>
+            LULC Distribution
+        </h2>
+
+
+        <div class="table-wrapper">
+
+            <table class="results-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Land Cover Class
+                        </th>
+
+                        <th>
+                            Area (%)
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Water Bodies
+                        </td>
+
+                        <td>
+                            0.72%
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Built-up Areas
+                        </td>
+
+                        <td>
+                            2.73%
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Croplands
+                        </td>
+
+                        <td>
+                            14.10%
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Vegetation
+                        </td>
+
+                        <td>
+                            9.42%
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Wooded Grassland
+                        </td>
+
+                        <td>
+                            50.30%
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Bare Land
+                        </td>
+
+                        <td>
+                            22.70%
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ACCURACY ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            ACCURACY ASSESSMENT
+        </p>
+
+        <h2>
+            Classification Accuracy
+        </h2>
+
+
+        <div class="info-grid">
+
+
+            <div class="info-card">
+
+                <h3>
+                    Overall Accuracy
+                </h3>
+
+                <p>
+
+                    <strong>
+                        95.61%
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    Kappa Coefficient
+                </h3>
+
+                <p>
+
+                    <strong>
+                        0.9561
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    Classification Quality
+                </h3>
+
+                <p>
+
+                    The classification achieved a high level
+                    of overall agreement based on the reported
+                    accuracy assessment.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= APPLICATIONS ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            APPLICATIONS
+        </p>
+
+        <h2>
+            Potential Applications
+        </h2>
+
+
+        <ul class="project-list">
+
+            <li>
+                Land-use planning and management
+            </li>
+
+            <li>
+                Environmental monitoring
+            </li>
+
+            <li>
+                Agricultural planning
+            </li>
+
+            <li>
+                Natural-resource assessment
+            </li>
+
+            <li>
+                Landscape change analysis
+            </li>
+
+            <li>
+                Spatial decision-making
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- ================= TECHNICAL SKILLS ================= -->
+
+    <section class="project-section">
+
+        <p class="eyebrow">
+            TECHNICAL EXPERTISE
+        </p>
+
+        <h2>
+            Skills Demonstrated
+        </h2>
+
+
+        <div class="skills-project">
+
+            <span>
+                Remote Sensing
+            </span>
+
+            <span>
+                Sentinel-2
+            </span>
+
+            <span>
+                Google Earth Engine
+            </span>
+
+            <span>
+                GIS
+            </span>
+
+            <span>
+                Image Classification
+            </span>
+
+            <span>
+                Machine Learning
+            </span>
+
+            <span>
+                Spatial Analysis
+            </span>
+
+            <span>
+                Cartography
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECT CTA ================= -->
+
+    <section class="project-cta">
+
+        <p class="eyebrow">
+            EXPLORE MORE
+        </p>
+
+        <h2>
+            Explore My Other Geospatial Projects
+        </h2>
+
+        <p>
+
+            Explore additional work in mineral exploration,
+            groundwater assessment and Web GIS development.
+
+        </p>
+
+
+        <a href="../index.html#projects"
+           class="btn primary">
+
+            Back to Projects
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+
+        <strong>
+            MOSES MKONDANI
+        </strong>
+
+        <p>
+            Geospatial Scientist • GIS • Remote Sensing • Web GIS
+        </p>
+
+    </div>
+
+
+    <div>
+
+        © <span id="year"></span>
+        Moses Mkondani
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script>
+
+    const yearElement =
+        document.getElementById("year");
+
+    if (yearElement) {
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                navMenu.classList.toggle("active");
+
+            }
+        );
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
 
 
     <!-- WEB GIS PROJECT -->
