@@ -14,139 +14,13 @@
     </title>
 
     <meta name="description"
-          content="Professional GIS, Remote Sensing and Web GIS portfolio of Moses Mkondani.">
+          content="Professional GIS, Remote Sensing, Earth Observation, UAV and Web GIS portfolio of Moses Mkondani.">
 
+    <meta name="author"
+          content="Moses Mkondani">
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Leaflet -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    >
-
-    <!-- ================= WEB GIS PREVIEW STYLING ================= -->
-
-    <style>
-
-        /* Project map images */
-
-        .project-image.map-image {
-            height: 260px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-image.map-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-
-        /* Live Web GIS project preview */
-
-        .webgis-card-preview {
-            height: 260px;
-            width: 100%;
-            background: #111820;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .webgis-card-preview iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-            pointer-events: none;
-            background: #ffffff;
-        }
-
-
-        /* Web GIS label */
-
-        .webgis-preview-label {
-            position: absolute;
-            left: 15px;
-            bottom: 15px;
-            padding: 8px 12px;
-            background: rgba(0, 0, 0, 0.78);
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            z-index: 5;
-        }
-
-
-        /* Large Web GIS application */
-
-        .webgis-live {
-            width: 100%;
-            background: #111820;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-        }
-
-        .webgis-live iframe {
-            width: 100%;
-            height: 650px;
-            border: none;
-            display: block;
-            background: #ffffff;
-        }
-
-        .webgis-launch {
-            padding: 25px;
-            text-align: center;
-            background: #111820;
-        }
-
-        .webgis-launch p {
-            margin-bottom: 18px;
-            color: #aebac1;
-        }
-
-
-        /* Web GIS links */
-
-        .webgis-project-link {
-            display: block;
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-        /* Mobile */
-
-        @media (max-width: 768px) {
-
-            .webgis-card-preview {
-                height: 240px;
-            }
-
-            .webgis-live iframe {
-                height: 500px;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            .webgis-card-preview {
-                height: 220px;
-            }
-
-            .webgis-live iframe {
-                height: 420px;
-            }
-
-        }
-
-    </style>
 
 </head>
 
@@ -154,15 +28,17 @@
 <body>
 
 
-<!-- ========================================================= -->
-<!-- NAVIGATION -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
 
 <header class="navbar">
 
     <div class="nav-container">
 
-        <a href="#home" class="logo">
+        <a href="#home"
+           class="logo"
+           aria-label="Moses Mkondani Home">
 
             <span>MK</span>
 
@@ -183,7 +59,10 @@
 
         <button
             class="menu-toggle"
-            id="menuToggle">
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false">
 
             ☰
 
@@ -209,7 +88,7 @@
             </a>
 
             <a href="#uav">
-                UAV & GNSS
+                UAV &amp; GNSS
             </a>
 
             <a href="#webgis">
@@ -235,11 +114,12 @@
 </header>
 
 
-<!-- ========================================================= -->
-<!-- HERO -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     HERO
+     ========================================================= -->
 
-<section id="home" class="hero">
+<section id="home"
+         class="hero">
 
     <div class="hero-content">
 
@@ -268,18 +148,16 @@
 
         <div class="hero-buttons">
 
-            <a
-                href="#projects"
-                class="btn primary">
+            <a href="#projects"
+               class="btn primary">
 
                 Explore My Work
 
             </a>
 
 
-            <a
-                href="#contact"
-                class="btn secondary">
+            <a href="#contact"
+               class="btn secondary">
 
                 Contact Me
 
@@ -336,7 +214,7 @@
                 </strong>
 
                 <span>
-                    Drone & GNSS
+                    Drone &amp; GNSS
                 </span>
 
             </div>
@@ -348,13 +226,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- ABOUT -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
 
-<section
-    id="about"
-    class="section">
+<section id="about"
+         class="section">
 
     <div class="section-header">
 
@@ -371,10 +248,8 @@
 
 
             <h2>
-
                 Geospatial Science
                 Meets Real-World Problems.
-
             </h2>
 
         </div>
@@ -422,11 +297,13 @@
         <div class="about-card">
 
             <div class="profile-placeholder profile-photo">
-    <img
-        src="assets/images/moses-mkondani.jpg"
-        alt="Moses Mkondani - Geospatial Scientist"
-    >
-</div>
+
+                <img
+                    src="assets/images/moses-mkondani.jpg"
+                    alt="Moses Mkondani - Geospatial Scientist"
+                    loading="lazy">
+
+            </div>
 
 
             <h3>
@@ -450,9 +327,9 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- FEATURED PROJECT -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     FEATURED PROJECT
+     ========================================================= -->
 
 <section class="featured-project">
 
@@ -466,10 +343,8 @@
 
 
             <h2>
-
                 Web GIS Gold Claim Pegging
                 Decision-Support System
-
             </h2>
 
 
@@ -491,18 +366,31 @@
 
             <div class="tags">
 
-                <span>GIS</span>
-                <span>Remote Sensing</span>
-                <span>Web GIS</span>
-                <span>PostGIS</span>
-                <span>GeoServer</span>
+                <span>
+                    GIS
+                </span>
+
+                <span>
+                    Remote Sensing
+                </span>
+
+                <span>
+                    Web GIS
+                </span>
+
+                <span>
+                    PostGIS
+                </span>
+
+                <span>
+                    GeoServer
+                </span>
 
             </div>
 
 
-            <a
-                href="#webgis"
-                class="btn primary">
+            <a href="#webgis"
+               class="btn primary">
 
                 View Project
 
@@ -513,14 +401,7 @@
 
         <div class="map-placeholder">
 
-            <div class="map-grid">
-
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
+            <div class="map-grid"></div>
 
 
             <div class="map-label">
@@ -536,13 +417,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- PROJECTS -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     PROJECTS
+     ========================================================= -->
 
-<section
-    id="projects"
-    class="section">
+<section id="projects"
+         class="section">
 
     <div class="section-header">
 
@@ -570,19 +450,14 @@
     <div class="project-grid">
 
 
-        <!-- ================================================= -->
-        <!-- GOLD PROSPECTIVITY PROJECT -->
-        <!-- ================================================= -->
+        <!-- =====================================================
+             GOLD PROSPECTIVITY
+             ===================================================== -->
 
         <article class="project-card">
 
-            <a
-                href="projects/gold-prospectivity.html"
-                style="
-                    display:block;
-                    color:inherit;
-                    text-decoration:none;
-                ">
+            <a href="projects/gold-prospectivity.html"
+               class="project-link">
 
 
                 <div class="project-image map-image">
@@ -590,7 +465,7 @@
                     <img
                         src="assets/images/gold-prospectivity-map.png"
                         alt="Gold Mineralisation Prospectivity Map"
-                    >
+                        loading="lazy">
 
                 </div>
 
@@ -603,10 +478,8 @@
 
 
                     <h3>
-
                         Gold Mineralisation
                         Prospectivity Mapping
-
                     </h3>
 
 
@@ -623,24 +496,27 @@
 
                     <div class="project-tools">
 
-                        <span>GIS</span>
-                        <span>Remote Sensing</span>
-                        <span>QGIS</span>
-                        <span>Google Earth Engine</span>
+                        <span>
+                            GIS
+                        </span>
+
+                        <span>
+                            Remote Sensing
+                        </span>
+
+                        <span>
+                            QGIS
+                        </span>
+
+                        <span>
+                            Google Earth Engine
+                        </span>
 
                     </div>
 
 
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <div class="project-view">
                         VIEW PROJECT →
-
                     </div>
 
                 </div>
@@ -650,19 +526,14 @@
         </article>
 
 
-        <!-- ================================================= -->
-        <!-- GROUNDWATER PROJECT -->
-        <!-- ================================================= -->
+        <!-- =====================================================
+             GROUNDWATER
+             ===================================================== -->
 
         <article class="project-card">
 
-            <a
-                href="projects/groundwater.html"
-                style="
-                    display:block;
-                    color:inherit;
-                    text-decoration:none;
-                ">
+            <a href="projects/groundwater.html"
+               class="project-link">
 
 
                 <div class="project-image map-image">
@@ -670,7 +541,7 @@
                     <img
                         src="assets/images/groundwater-potential-map.png"
                         alt="Groundwater Potential Zone Map"
-                    >
+                        loading="lazy">
 
                 </div>
 
@@ -683,10 +554,8 @@
 
 
                     <h3>
-
                         Groundwater Potential
                         Zone Modelling
-
                     </h3>
 
 
@@ -702,24 +571,27 @@
 
                     <div class="project-tools">
 
-                        <span>GIS</span>
-                        <span>Remote Sensing</span>
-                        <span>DEM</span>
-                        <span>Spatial Modelling</span>
+                        <span>
+                            GIS
+                        </span>
+
+                        <span>
+                            Remote Sensing
+                        </span>
+
+                        <span>
+                            DEM
+                        </span>
+
+                        <span>
+                            Spatial Modelling
+                        </span>
 
                     </div>
 
 
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <div class="project-view">
                         VIEW PROJECT →
-
                     </div>
 
                 </div>
@@ -729,19 +601,14 @@
         </article>
 
 
-        <!-- ================================================= -->
-        <!-- LULC PROJECT -->
-        <!-- ================================================= -->
+        <!-- =====================================================
+             LULC
+             ===================================================== -->
 
         <article class="project-card">
 
-            <a
-                href="projects/lulc.html"
-                style="
-                    display:block;
-                    color:inherit;
-                    text-decoration:none;
-                ">
+            <a href="projects/lulc.html"
+               class="project-link">
 
 
                 <div class="project-image map-image">
@@ -749,7 +616,7 @@
                     <img
                         src="assets/lulc-map.png"
                         alt="Land Use and Land Cover Classification Map"
-                    >
+                        loading="lazy">
 
                 </div>
 
@@ -762,10 +629,8 @@
 
 
                     <h3>
-
-                        Land Use & Land Cover
+                        Land Use &amp; Land Cover
                         Classification
-
                     </h3>
 
 
@@ -780,23 +645,23 @@
 
                     <div class="project-tools">
 
-                        <span>Sentinel-2</span>
-                        <span>Google Earth Engine</span>
-                        <span>Machine Learning</span>
+                        <span>
+                            Sentinel-2
+                        </span>
+
+                        <span>
+                            Google Earth Engine
+                        </span>
+
+                        <span>
+                            Machine Learning
+                        </span>
 
                     </div>
 
 
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <div class="project-view">
                         VIEW PROJECT →
-
                     </div>
 
                 </div>
@@ -806,9 +671,9 @@
         </article>
 
 
-        <!-- ================================================= -->
-        <!-- WEB GIS PROJECT -->
-        <!-- ================================================= -->
+        <!-- =====================================================
+             WEB GIS
+             ===================================================== -->
 
         <article class="project-card">
 
@@ -816,10 +681,8 @@
                 href="https://geo-proj.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="webgis-project-link">
+                class="project-link">
 
-
-                <!-- LIVE WEB GIS PREVIEW -->
 
                 <div class="webgis-card-preview">
 
@@ -831,15 +694,11 @@
 
 
                     <div class="webgis-preview-label">
-
                         WEB GIS
-
                     </div>
 
                 </div>
 
-
-                <!-- PROJECT INFORMATION -->
 
                 <div class="project-body">
 
@@ -849,10 +708,8 @@
 
 
                     <h3>
-
                         Goldmine Pegging Decision
                         Support System
-
                     </h3>
 
 
@@ -868,24 +725,27 @@
 
                     <div class="project-tools">
 
-                        <span>GeoServer</span>
-                        <span>PostGIS</span>
-                        <span>Leaflet</span>
-                        <span>JavaScript</span>
+                        <span>
+                            GeoServer
+                        </span>
+
+                        <span>
+                            PostGIS
+                        </span>
+
+                        <span>
+                            Leaflet
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
 
                     </div>
 
 
-                    <div style="
-                        margin-top:20px;
-                        font-size:11px;
-                        font-weight:bold;
-                        letter-spacing:1px;
-                        color:#6d95a4;
-                    ">
-
+                    <div class="project-view">
                         OPEN WEB GIS →
-
                     </div>
 
                 </div>
@@ -900,13 +760,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- REMOTE SENSING -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     REMOTE SENSING
+     ========================================================= -->
 
-<section
-    id="remote-sensing"
-    class="dark-section">
+<section id="remote-sensing"
+         class="dark-section">
 
     <div class="section-header">
 
@@ -1029,13 +888,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- UAV & GNSS -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     UAV & GNSS
+     ========================================================= -->
 
-<section
-    id="uav"
-    class="section">
+<section id="uav"
+         class="section">
 
     <div class="section-header">
 
@@ -1047,12 +905,12 @@
         <div>
 
             <p class="eyebrow">
-                FIELD & SURVEYING
+                FIELD &amp; SURVEYING
             </p>
 
 
             <h2>
-                UAV & GNSS
+                UAV &amp; GNSS
             </h2>
 
         </div>
@@ -1187,13 +1045,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- WEB GIS -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     WEB GIS
+     ========================================================= -->
 
-<section
-    id="webgis"
-    class="webgis-section">
+<section id="webgis"
+         class="webgis-section">
 
     <div class="webgis-container">
 
@@ -1213,7 +1070,7 @@
 
 
                 <h2>
-                    Web GIS & Decision Support
+                    Web GIS &amp; Decision Support
                 </h2>
 
             </div>
@@ -1224,7 +1081,9 @@
         <div class="webgis-grid">
 
 
-            <!-- WEB GIS DESCRIPTION -->
+            <!-- =================================================
+                 WEB GIS DESCRIPTION
+                 ================================================= -->
 
             <div class="webgis-description">
 
@@ -1292,9 +1151,7 @@
                 </ul>
 
 
-                <div style="
-                    margin-top:30px;
-                ">
+                <div class="webgis-action">
 
                     <a
                         href="https://geo-proj.vercel.app/"
@@ -1311,9 +1168,9 @@
             </div>
 
 
-            <!-- ================================================= -->
-            <!-- LARGE LIVE WEB GIS -->
-            <!-- ================================================= -->
+            <!-- =================================================
+                 LIVE WEB GIS
+                 ================================================= -->
 
             <div class="webgis-live">
 
@@ -1356,13 +1213,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- TECHNICAL SKILLS -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     TECHNICAL SKILLS
+     ========================================================= -->
 
-<section
-    id="skills"
-    class="section">
+<section id="skills"
+         class="section">
 
     <div class="section-header">
 
@@ -1472,7 +1328,7 @@
         <div class="skill-group">
 
             <h3>
-                UAV & Survey
+                UAV &amp; Survey
             </h3>
 
 
@@ -1511,13 +1367,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- CV -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     CV
+     ========================================================= -->
 
-<section
-    id="cv"
-    class="cv-section">
+<section id="cv"
+         class="cv-section">
 
     <div>
 
@@ -1554,13 +1409,12 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- CONTACT -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
 
-<section
-    id="contact"
-    class="section contact-section">
+<section id="contact"
+         class="section contact-section">
 
     <div class="section-header">
 
@@ -1612,8 +1466,13 @@
             </a>
 
 
-            <a href="#">
+            <!-- Replace # with your real LinkedIn URL -->
+
+            <a href="#"
+               aria-label="LinkedIn profile">
+
                 LinkedIn
+
             </a>
 
 
@@ -1628,9 +1487,9 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- FOOTER -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
@@ -1642,9 +1501,7 @@
 
 
         <p>
-
             Geospatial Scientist • GIS • Remote Sensing • Web GIS
-
         </p>
 
     </div>
@@ -1660,17 +1517,73 @@
 </footer>
 
 
-<!-- ========================================================= -->
-<!-- SCRIPTS -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
 
-<script src="script.js"></script>
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    menuToggle.addEventListener("click", function () {
+
+        const isOpen =
+            navMenu.classList.toggle("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    });
+
+
+    /* =====================================================
+       CLOSE MOBILE MENU AFTER CLICKING A LINK
+       ===================================================== */
+
+    const navLinks =
+        navMenu.querySelectorAll("a");
+
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navMenu.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+
+    /* =====================================================
+       AUTOMATIC COPYRIGHT YEAR
+       ===================================================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
 
 
 </body>
 
 </html>
 ```
+
 
