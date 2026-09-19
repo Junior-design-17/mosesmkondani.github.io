@@ -1,10 +1,13 @@
 /* =========================================================
-   MOSES MKONDANI | GEOSPATIAL SCIENTIST
-   Main Portfolio Stylesheet
+   MOSES MKONDANI
+   GEOSPATIAL SCIENTIST PORTFOLIO
+   MAIN STYLESHEET
    ========================================================= */
 
 
-/* ================= RESET ================= */
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -14,7 +17,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
 
 body {
@@ -22,7 +24,6 @@ body {
     color: #18202a;
     background: #f7f8fa;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 a {
@@ -32,7 +33,6 @@ a {
 
 img {
     max-width: 100%;
-    height: auto;
 }
 
 button {
@@ -40,7 +40,9 @@ button {
 }
 
 
-/* ================= NAVIGATION ================= */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 .navbar {
     position: fixed;
@@ -56,10 +58,8 @@ button {
 }
 
 .nav-container {
-    width: 100%;
     max-width: 1250px;
     margin: auto;
-
     padding: 15px 25px;
 
     display: flex;
@@ -86,7 +86,6 @@ button {
     border: 1px solid #7da7b8;
 
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
 .logo strong {
@@ -107,7 +106,6 @@ button {
 
 nav {
     display: flex;
-    align-items: center;
     gap: 20px;
 }
 
@@ -116,7 +114,7 @@ nav a {
 
     font-size: 12px;
 
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -137,7 +135,9 @@ nav a:hover {
 }
 
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
     min-height: 100vh;
@@ -170,24 +170,25 @@ nav a:hover {
 }
 
 .eyebrow {
-    margin-bottom: 18px;
-
     font-size: 11px;
-    font-weight: bold;
 
     letter-spacing: 3px;
 
+    font-weight: bold;
+
     color: #6f9daf;
+
+    margin-bottom: 18px;
 }
 
 .hero h1 {
-    max-width: 900px;
-
-    margin-bottom: 30px;
-
     font-size: clamp(45px, 7vw, 90px);
 
     line-height: 1.02;
+
+    max-width: 900px;
+
+    margin-bottom: 30px;
 }
 
 .hero h1 span {
@@ -203,11 +204,11 @@ nav a:hover {
 }
 
 .hero-buttons {
-    margin-top: 35px;
-
     display: flex;
-    flex-wrap: wrap;
+
     gap: 15px;
+
+    margin-top: 35px;
 }
 
 .btn {
@@ -216,25 +217,26 @@ nav a:hover {
     padding: 13px 23px;
 
     font-size: 12px;
+
     font-weight: bold;
 
     letter-spacing: 1px;
 
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease;
+    transition: 0.3s;
+
+    cursor: pointer;
 }
 
 .btn.primary {
     background: #739eae;
+
     color: white;
 }
 
 .btn.primary:hover {
-    background: #82aebe;
-
     transform: translateY(-3px);
+
+    background: #82aebe;
 }
 
 .btn.secondary {
@@ -245,21 +247,22 @@ nav a:hover {
 
 .btn.secondary:hover {
     background: white;
+
     color: #101a22;
 }
 
 .hero-stats {
-    margin-top: 75px;
-
     display: flex;
-    flex-wrap: wrap;
+
     gap: 55px;
+
+    margin-top: 75px;
 }
 
 .hero-stats div {
-    padding-left: 18px;
-
     border-left: 1px solid #465863;
+
+    padding-left: 18px;
 }
 
 .hero-stats strong {
@@ -275,10 +278,11 @@ nav a:hover {
 }
 
 
-/* ================= GENERAL SECTIONS ================= */
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
 
 .section {
-    width: 100%;
     max-width: 1250px;
 
     margin: auto;
@@ -295,9 +299,10 @@ nav a:hover {
 }
 
 .section-number {
+    font-size: 12px;
+
     color: #7899a8;
 
-    font-size: 12px;
     font-weight: bold;
 }
 
@@ -308,7 +313,9 @@ nav a:hover {
 }
 
 
-/* ================= ABOUT ================= */
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about-grid {
     display: grid;
@@ -331,19 +338,15 @@ nav a:hover {
 }
 
 .about-card {
-    padding: 35px;
-
     background: white;
+
+    padding: 35px;
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.06);
 }
 
-
-/* ================= PROFILE ================= */
-
 .profile-placeholder {
-    width: 100%;
     height: 250px;
 
     background:
@@ -356,45 +359,42 @@ nav a:hover {
         );
 
     display: flex;
-    align-items: center;
-    justify-content: center;
 
-    overflow: hidden;
+    align-items: center;
+
+    justify-content: center;
 }
 
 .profile-placeholder span {
     font-size: 60px;
+
     font-weight: bold;
 
     color: #506873;
 }
 
 
-/* ================= PROFILE PHOTO ================= */
-/*
-   This section is ready for your profile photograph.
-
-   When your photo is confirmed working, use:
-
-   <div class="profile-placeholder profile-photo">
-       <img src="assets/images/moses-mkondani.jpg"
-            alt="Moses Mkondani">
-   </div>
-*/
+/* PROFILE PHOTO */
 
 .profile-placeholder.profile-photo {
+    overflow: hidden;
+
     padding: 0;
+
+    background: #dfe7ea;
 }
 
 .profile-placeholder.profile-photo img {
     width: 100%;
+
     height: 100%;
 
-    display: block;
-
     object-fit: cover;
-}
 
+    object-position: center;
+
+    display: block;
+}
 
 .about-card h3 {
     margin-top: 25px;
@@ -415,7 +415,9 @@ nav a:hover {
 }
 
 
-/* ================= FEATURED PROJECT ================= */
+/* =========================================================
+   FEATURED PROJECT
+   ========================================================= */
 
 .featured-project {
     background: #101b23;
@@ -424,7 +426,6 @@ nav a:hover {
 }
 
 .featured-container {
-    width: 100%;
     max-width: 1250px;
 
     margin: auto;
@@ -441,17 +442,17 @@ nav a:hover {
 }
 
 .featured-content h2 {
-    margin-bottom: 15px;
-
     font-size: clamp(35px, 5vw, 60px);
 
     line-height: 1.05;
+
+    margin-bottom: 15px;
 }
 
 .project-location {
-    margin-bottom: 25px;
-
     color: #83aebe;
+
+    margin-bottom: 25px;
 }
 
 .featured-content > p:not(.eyebrow):not(.project-location) {
@@ -459,26 +460,27 @@ nav a:hover {
 }
 
 .tags {
-    margin: 30px 0;
-
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 8px;
+
+    margin: 30px 0;
 }
 
 .tags span,
 .project-tools span,
 .skill-list span {
-    padding: 5px 10px;
-
     border: 1px solid #b6c5cb;
+
+    padding: 5px 10px;
 
     font-size: 10px;
 }
 
 
-/* ================= FEATURED MAP ================= */
+/* FEATURED MAP */
 
 .map-placeholder {
     height: 480px;
@@ -521,11 +523,12 @@ nav a:hover {
     position: absolute;
 
     bottom: 20px;
+
     left: 20px;
 
-    padding: 10px 15px;
-
     background: rgba(0, 0, 0, 0.7);
+
+    padding: 10px 15px;
 
     font-size: 11px;
 
@@ -533,7 +536,9 @@ nav a:hover {
 }
 
 
-/* ================= PROJECTS ================= */
+/* =========================================================
+   PROJECTS
+   ========================================================= */
 
 .project-grid {
     display: grid;
@@ -545,8 +550,6 @@ nav a:hover {
 
 .project-card {
     background: white;
-
-    overflow: hidden;
 
     box-shadow:
         0 10px 35px rgba(0, 0, 0, 0.05);
@@ -560,53 +563,62 @@ nav a:hover {
     transform: translateY(-5px);
 
     box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.09);
+        0 18px 45px rgba(0, 0, 0, 0.10);
 }
 
 .project-link {
     display: block;
 
     color: inherit;
-
-    text-decoration: none;
 }
 
 .project-image {
     height: 260px;
 
     display: flex;
+
     align-items: end;
 
     padding: 20px;
 
-    color: white;
-
     font-size: 11px;
 
     letter-spacing: 2px;
+
+    color: white;
+
+    overflow: hidden;
 }
 
 .project-image.map-image {
     height: 260px;
 
-    padding: 0;
-
     position: relative;
 
-    overflow: hidden;
+    padding: 0;
 }
 
 .project-image.map-image img {
     width: 100%;
+
     height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
 
     display: block;
 
-    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover
+.project-image.map-image img {
+    transform: scale(1.03);
 }
 
 
-/* ================= PROJECT FALLBACK MAPS ================= */
+/* PROJECT FALLBACK COLOURS */
 
 .gold-map {
     background:
@@ -648,9 +660,6 @@ nav a:hover {
         );
 }
 
-
-/* ================= PROJECT BODY ================= */
-
 .project-body {
     padding: 30px;
 }
@@ -664,11 +673,11 @@ nav a:hover {
 }
 
 .project-body h3 {
-    margin: 12px 0;
-
     font-size: 25px;
 
     line-height: 1.2;
+
+    margin: 12px 0;
 }
 
 .project-body p {
@@ -678,12 +687,13 @@ nav a:hover {
 }
 
 .project-tools {
-    margin-top: 20px;
-
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 7px;
+
+    margin-top: 20px;
 }
 
 .project-tools span {
@@ -692,51 +702,61 @@ nav a:hover {
     color: #56656d;
 }
 
-.project-view {
+.project-action {
     margin-top: 20px;
 
-    font-size: 11px !important;
+    font-size: 11px;
+
     font-weight: bold;
 
     letter-spacing: 1px;
 
-    color: #6d95a4 !important;
+    color: #6d95a4;
 }
 
 
-/* ================= WEB GIS PROJECT CARD ================= */
+/* =========================================================
+   WEB GIS PROJECT PREVIEW
+   ========================================================= */
+
+.webgis-project-link {
+    display: block;
+
+    color: inherit;
+}
 
 .webgis-card-preview {
-    width: 100%;
     height: 260px;
 
-    position: relative;
+    width: 100%;
 
     background: #111820;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 .webgis-card-preview iframe {
     width: 100%;
-    height: 100%;
 
-    display: block;
+    height: 100%;
 
     border: none;
 
-    background: white;
+    display: block;
 
     pointer-events: none;
+
+    background: white;
 }
 
 .webgis-preview-label {
     position: absolute;
 
     left: 15px;
-    bottom: 15px;
 
-    z-index: 5;
+    bottom: 15px;
 
     padding: 8px 12px;
 
@@ -745,36 +765,30 @@ nav a:hover {
     color: white;
 
     font-size: 11px;
+
     font-weight: bold;
 
     letter-spacing: 1px;
+
+    z-index: 5;
 }
 
 
-/* ================= DARK SECTION ================= */
+/* =========================================================
+   DARK SECTION
+   ========================================================= */
 
 .dark-section {
-    padding: 110px 25px;
-
     background: #101b23;
 
     color: white;
-}
 
-.dark-section .section-header {
-    width: 100%;
-    max-width: 1200px;
-
-    margin-left: auto;
-    margin-right: auto;
+    padding:
+        110px
+        max(25px, calc((100vw - 1200px) / 2));
 }
 
 .capability-grid {
-    width: 100%;
-    max-width: 1200px;
-
-    margin: auto;
-
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
@@ -783,9 +797,9 @@ nav a:hover {
 }
 
 .capability {
-    padding-top: 20px;
-
     border-top: 1px solid #536671;
+
+    padding-top: 20px;
 }
 
 .capability-number {
@@ -807,7 +821,9 @@ nav a:hover {
 }
 
 
-/* ================= UAV ================= */
+/* =========================================================
+   UAV
+   ========================================================= */
 
 .uav-grid {
     display: grid;
@@ -818,9 +834,9 @@ nav a:hover {
 }
 
 .uav-grid h3 {
-    margin-bottom: 15px;
-
     font-size: 27px;
+
+    margin-bottom: 15px;
 }
 
 .uav-grid p {
@@ -834,9 +850,9 @@ nav a:hover {
 }
 
 .uav-grid li {
-    padding: 8px 0;
-
     border-bottom: 1px solid #dce1e4;
+
+    padding: 8px 0;
 
     font-size: 13px;
 }
@@ -847,29 +863,28 @@ nav a:hover {
     color: #729aaa;
 }
 
-
-/* ================= SURVEY BOX ================= */
-
 .survey-box {
-    padding: 40px;
-
     background: #101b23;
 
     color: white;
 
+    padding: 40px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
 .workflow {
-    margin-top: 30px;
-
     display: flex;
+
     align-items: center;
-    flex-wrap: wrap;
 
     gap: 12px;
+
+    margin-top: 30px;
 
     font-size: 11px;
 }
@@ -879,14 +894,15 @@ nav a:hover {
 }
 
 
-/* ================= WEB GIS SECTION ================= */
+/* =========================================================
+   WEB GIS SECTION
+   ========================================================= */
 
 .webgis-section {
     background: #e9eef0;
 }
 
 .webgis-container {
-    width: 100%;
     max-width: 1250px;
 
     margin: auto;
@@ -906,25 +922,24 @@ nav a:hover {
     color: #59656c;
 }
 
-
-/* ================= WEB GIS ARCHITECTURE ================= */
-
 .architecture {
-    margin: 35px 0;
-
     display: flex;
+
     align-items: center;
-    flex-wrap: wrap;
 
     gap: 10px;
+
+    margin: 35px 0;
+
+    flex-wrap: wrap;
 }
 
 .architecture div {
-    padding: 13px;
-
     background: #14212a;
 
     color: white;
+
+    padding: 13px;
 
     font-size: 10px;
 }
@@ -938,19 +953,19 @@ nav a:hover {
 }
 
 .webgis-description li {
-    padding: 10px 0;
-
     border-bottom: 1px solid #ccd4d8;
+
+    padding: 10px 0;
 
     font-size: 13px;
 }
 
-.webgis-action {
+.webgis-launch-button {
     margin-top: 30px;
 }
 
 
-/* ================= LIVE WEB GIS ================= */
+/* LARGE WEB GIS */
 
 .webgis-live {
     width: 100%;
@@ -967,11 +982,12 @@ nav a:hover {
 
 .webgis-live iframe {
     width: 100%;
+
     height: 650px;
 
-    display: block;
-
     border: none;
+
+    display: block;
 
     background: white;
 }
@@ -991,7 +1007,9 @@ nav a:hover {
 }
 
 
-/* ================= SKILLS ================= */
+/* =========================================================
+   SKILLS
+   ========================================================= */
 
 .skills-grid {
     display: grid;
@@ -1002,9 +1020,9 @@ nav a:hover {
 }
 
 .skill-group {
-    padding-top: 20px;
-
     border-top: 1px solid #cbd3d7;
+
+    padding-top: 20px;
 }
 
 .skill-group h3 {
@@ -1013,6 +1031,7 @@ nav a:hover {
 
 .skill-list {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 7px;
@@ -1025,14 +1044,16 @@ nav a:hover {
 }
 
 
-/* ================= CV ================= */
+/* =========================================================
+   CV
+   ========================================================= */
 
 .cv-section {
-    padding: 100px 25px;
-
     background: #101b23;
 
     color: white;
+
+    padding: 100px 25px;
 
     text-align: center;
 }
@@ -1044,21 +1065,23 @@ nav a:hover {
 }
 
 .cv-section h2 {
-    margin-bottom: 20px;
-
     font-size: 50px;
 
     line-height: 1.1;
+
+    margin-bottom: 20px;
 }
 
 .cv-section p:not(.eyebrow) {
-    margin-bottom: 30px;
-
     color: #aebac1;
+
+    margin-bottom: 30px;
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-grid {
     display: grid;
@@ -1074,29 +1097,20 @@ nav a:hover {
     color: #56636a;
 }
 
-.contact-grid > div:first-child p {
-    margin-bottom: 25px;
-}
-
 .contact-details {
     display: flex;
+
     flex-direction: column;
 
     gap: 20px;
 }
 
 .contact-details a {
-    padding-bottom: 12px;
+    font-size: 20px;
 
     border-bottom: 1px solid #cfd6da;
 
-    font-size: 20px;
-
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: #6d95a4;
+    padding-bottom: 12px;
 }
 
 .contact-details span {
@@ -1104,20 +1118,22 @@ nav a:hover {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
-    width: 100%;
-
-    padding: 40px 25px;
-
     background: #071018;
 
     color: white;
 
+    padding: 40px 25px;
+
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
+
+    max-width: 100%;
 }
 
 footer p {
@@ -1128,36 +1144,10 @@ footer p {
 
 
 /* =========================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE — TABLET
    ========================================================= */
 
-
-/* ================= 1100px ================= */
-
-@media (max-width: 1100px) {
-
-    nav {
-        gap: 14px;
-    }
-
-    .about-grid {
-        gap: 50px;
-    }
-
-    .featured-container {
-        gap: 45px;
-    }
-
-}
-
-
-/* ================= 900px ================= */
-
 @media (max-width: 900px) {
-
-    .nav-container {
-        padding: 14px 20px;
-    }
 
     nav {
         display: none;
@@ -1165,18 +1155,16 @@ footer p {
         position: absolute;
 
         top: 72px;
+
         left: 0;
 
         width: 100%;
 
-        padding: 25px;
-
         background: #101b23;
 
         flex-direction: column;
-        align-items: flex-start;
 
-        gap: 18px;
+        padding: 25px;
     }
 
     nav.active {
@@ -1220,63 +1208,22 @@ footer p {
         font-size: 55px;
     }
 
-    .hero-description {
-        font-size: 17px;
-    }
-
-
-    .featured-container {
-        padding: 80px 25px;
-    }
-
-
-    .map-placeholder {
-        height: 400px;
-    }
-
-}
-
-
-/* ================= 768px ================= */
-
-@media (max-width: 768px) {
 
     .webgis-card-preview {
-        height: 240px;
-    }
-
-    .webgis-live iframe {
-        height: 500px;
+        height: 300px;
     }
 
 }
 
 
-/* ================= 600px ================= */
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
-    .navbar {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-    }
-
-
     .nav-container {
-        padding: 12px 18px;
-    }
-
-
-    .logo {
-        gap: 9px;
-    }
-
-
-    .logo span {
-        width: 38px;
-        height: 38px;
-
-        font-size: 13px;
+        padding: 14px 20px;
     }
 
 
@@ -1290,53 +1237,24 @@ footer p {
     }
 
 
-    nav {
-        top: 62px;
-
-        padding: 22px 20px;
-    }
-
-
-    .hero {
-        min-height: 100svh;
-    }
-
-
-    .hero-content {
-        max-width: 90%;
-
-        padding-top: 70px;
-    }
-
-
     .hero h1 {
-        margin-bottom: 22px;
-
         font-size: 43px;
-
-        line-height: 1.04;
     }
 
 
     .hero-description {
-        font-size: 15px;
+        font-size: 16px;
     }
 
 
     .hero-buttons {
         flex-direction: column;
+
         align-items: flex-start;
     }
 
 
-    .btn {
-        padding: 12px 20px;
-    }
-
-
     .hero-stats {
-        margin-top: 55px;
-
         display: grid;
 
         grid-template-columns: 1fr 1fr;
@@ -1345,18 +1263,9 @@ footer p {
     }
 
 
-    .hero-stats div {
-        padding-left: 12px;
-    }
-
-
-    .hero-stats strong {
-        font-size: 17px;
-    }
-
-
-    .hero-stats span {
-        font-size: 9px;
+    .capability-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
 
@@ -1372,38 +1281,8 @@ footer p {
     }
 
 
-    .section h2 {
-        font-size: 38px;
-    }
-
-
-    .about-grid {
-        gap: 35px;
-    }
-
-
-    .about-text .lead {
-        font-size: 19px;
-    }
-
-
-    .about-card {
-        padding: 25px;
-    }
-
-
-    .profile-placeholder {
-        height: 300px;
-    }
-
-
     .featured-container {
         padding: 75px 20px;
-    }
-
-
-    .featured-content h2 {
-        font-size: 40px;
     }
 
 
@@ -1412,64 +1291,13 @@ footer p {
     }
 
 
-    .project-grid {
-        gap: 25px;
-    }
-
-
-    .project-image {
-        height: 220px;
-    }
-
-
     .project-image.map-image {
+        height: 240px;
+    }
+
+
+    .webgis-card-preview {
         height: 220px;
-    }
-
-
-    .project-body {
-        padding: 25px;
-    }
-
-
-    .project-body h3 {
-        font-size: 22px;
-    }
-
-
-    .dark-section {
-        padding: 75px 20px;
-    }
-
-
-    .capability-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .capability h3 {
-        margin-top: 25px;
-    }
-
-
-    .uav-grid {
-        gap: 35px;
-    }
-
-
-    .uav-grid h3 {
-        font-size: 24px;
-    }
-
-
-    .survey-box {
-        padding: 30px;
-    }
-
-
-    .webgis-container {
-        padding: 75px 20px;
     }
 
 
@@ -1478,35 +1306,13 @@ footer p {
     }
 
 
-    .architecture {
-        gap: 7px;
-    }
-
-
-    .architecture div {
-        padding: 10px;
-
-        font-size: 9px;
-    }
-
-
-    .cv-section {
-        padding: 75px 20px;
-    }
-
-
     .cv-section h2 {
-        font-size: 40px;
-    }
-
-
-    .contact-grid {
-        gap: 40px;
+        font-size: 38px;
     }
 
 
     .contact-grid > div:first-child {
-        font-size: 19px;
+        font-size: 18px;
     }
 
 
@@ -1516,41 +1322,19 @@ footer p {
 
 
     footer {
-        padding: 30px 20px;
-
         flex-direction: column;
-        align-items: flex-start;
 
-        gap: 15px;
-    }
-
-
-    .webgis-card-preview {
-        height: 220px;
+        gap: 20px;
     }
 
 }
 
 
-/* ================= 480px ================= */
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
 
-@media (max-width: 480px) {
-
-    .webgis-card-preview {
-        height: 220px;
-    }
-
-
-    .webgis-live iframe {
-        height: 420px;
-    }
-
-}
-
-
-/* ================= 380px ================= */
-
-@media (max-width: 380px) {
+@media (max-width: 400px) {
 
     .hero h1 {
         font-size: 37px;
@@ -1562,29 +1346,14 @@ footer p {
     }
 
 
-    .section h2 {
-        font-size: 34px;
+    .logo span {
+        width: 38px;
+        height: 38px;
     }
 
 
     .profile-placeholder {
-        height: 250px;
-    }
-
-
-    .project-image {
-        height: 200px;
-    }
-
-
-    .project-image.map-image {
-        height: 200px;
-    }
-
-
-    .webgis-live iframe {
-        height: 350px;
+        height: 220px;
     }
 
 }
-
